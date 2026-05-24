@@ -23,3 +23,11 @@ const SOLAR_SYSTEM_DATA = {
     ]
   },
   planets: [
+    {
+      id: "mercury",
+      name: "Mercury",
+      type: "planet",
+      radius: 4,
+      color: "#d500f9", // Purple-pink orbit accent (NASA style)
+      bodyColor: "#b0bec5", // Gray rocky color
+      orbit: {

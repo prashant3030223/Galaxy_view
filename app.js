@@ -39,3 +39,17 @@ class SoundController {
     const gain1 = this.ctx.createGain();
     const gain2 = this.ctx.createGain();
     gain1.gain.setValueAtTime(0.08, this.ctx.currentTime);
+    gain2.gain.setValueAtTime(0.12, this.ctx.currentTime);
+    
+    this.droneOsc1.connect(gain1);
+    this.droneOsc2.connect(gain2);
+    
+    gain1.connect(this.filter);
+    gain2.connect(this.filter);
+    
+    // LFO for filter frequency modulation (breathing effect)
+    this.lfo = this.ctx.createOscillator();
+    this.lfo.frequency.setValueAtTime(0.06, this.ctx.currentTime); // 16s cycle
+    const lfoGain = this.ctx.createGain();
+    lfoGain.gain.setValueAtTime(35, this.ctx.currentTime);
+    

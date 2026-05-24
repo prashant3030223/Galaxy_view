@@ -39,3 +39,17 @@ class SpaceCanvas {
 
   resize() {
     const dpr = window.devicePixelRatio || 1;
+    this.canvas.width = this.canvas.clientWidth * dpr;
+    this.canvas.height = this.canvas.clientHeight * dpr;
+    this.ctx.scale(dpr, dpr);
+  }
+
+  generateStars(count) {
+    this.stars = [];
+    for (let i = 0; i < count; i++) {
+      // Generate points uniformly on a sphere of radius 1200
+      const theta = Math.random() * Math.PI * 2;
+      const phi = Math.acos((Math.random() * 2) - 1);
+      const r = 1000 + Math.random() * 500;
+
+      this.stars.push({
