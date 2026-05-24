@@ -11,3 +11,17 @@
   --text-muted: #6b7280;
   
   --color-live: #10b981;
+  --font-display: 'Outfit', 'Inter', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+body, html {
