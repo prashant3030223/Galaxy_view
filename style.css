@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;700&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --bg-color: #030712;
+  --panel-bg: rgba(10, 15, 30, 0.72);
+  --panel-border: rgba(255, 255, 255, 0.09);
+  --glass-glow: rgba(0, 229, 255, 0.15);
+  
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  
+  --color-live: #10b981;
