@@ -25,3 +25,17 @@ class SoundController {
     this.filter.Q.setValueAtTime(2.0, this.ctx.currentTime);
     this.filter.frequency.setValueAtTime(100, this.ctx.currentTime);
     this.filter.connect(this.masterGain);
+    
+    // Sawtooth drone (low chord)
+    this.droneOsc1 = this.ctx.createOscillator();
+    this.droneOsc1.type = "sawtooth";
+    this.droneOsc1.frequency.setValueAtTime(55.0, this.ctx.currentTime); // A1 note
+    
+    // Triangle drone (fifth)
+    this.droneOsc2 = this.ctx.createOscillator();
+    this.droneOsc2.type = "triangle";
+    this.droneOsc2.frequency.setValueAtTime(82.41, this.ctx.currentTime); // E2 note
+    
+    const gain1 = this.ctx.createGain();
+    const gain2 = this.ctx.createGain();
+    gain1.gain.setValueAtTime(0.08, this.ctx.currentTime);

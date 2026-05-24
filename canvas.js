@@ -25,3 +25,17 @@ class SpaceCanvas {
 
     // Interaction states
     this.isDragging = false;
+    this.dragMode = "rotate"; // "rotate" or "pan"
+    this.lastMouseX = 0;
+    this.lastMouseY = 0;
+
+    // Resize handler
+    this.resize();
+    window.addEventListener("resize", () => this.resize());
+
+    // Bind interaction events
+    this.setupEvents();
+  }
+
+  resize() {
+    const dpr = window.devicePixelRatio || 1;
