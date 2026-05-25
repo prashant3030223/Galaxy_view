@@ -66,3 +66,17 @@ class SpaceCanvas {
   project(x, y, z) {
     // 1. Rotate around Y axis (Yaw)
     const cosY = Math.cos(this.yaw);
+    const sinY = Math.sin(this.yaw);
+    const x1 = x * cosY - z * sinY;
+    const z1 = x * sinY + z * cosY;
+    const y1 = y;
+
+    // 2. Rotate around X axis (Pitch)
+    const cosX = Math.cos(this.pitch);
+    const sinX = Math.sin(this.pitch);
+    const x2 = x1;
+    const y2 = y1 * cosX - z1 * sinX;
+    const z2 = y1 * sinX + z1 * cosX;
+
+    // 3. Perspective Projection
+    const scale = this.cameraDistance / (this.cameraDistance + z2);

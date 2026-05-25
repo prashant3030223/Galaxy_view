@@ -66,3 +66,17 @@ class SoundController {
     if (!this.ctx) this.init();
     
     if (this.isEnabled) {
+      // Fade out
+      this.masterGain.gain.cancelScheduledValues(this.ctx.currentTime);
+      this.masterGain.gain.setValueAtTime(this.masterGain.gain.value, this.ctx.currentTime);
+      this.masterGain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + 1.0);
+      setTimeout(() => {
+        if (!this.isEnabled && this.ctx) this.ctx.suspend();
+      }, 1000);
+      this.isEnabled = false;
+    } else {
+      // Fade in
+      this.ctx.resume();
+      this.masterGain.gain.cancelScheduledValues(this.ctx.currentTime);
+      this.masterGain.gain.setValueAtTime(this.masterGain.gain.value, this.ctx.currentTime);
+      this.masterGain.gain.linearRampToValueAtTime(0.4, this.ctx.currentTime + 1.2);

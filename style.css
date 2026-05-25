@@ -67,3 +67,17 @@ body, html {
 }
 
 /* UI Overlay - Layered over canvas */
+.ui-layer {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none; /* Let clicks pass to canvas except on child elements */
+  width: 100%;
+}
+
+.interactive {
+  pointer-events: auto; /* Re-enable clicks for buttons/panels */
+}
+
+/* Top Navigation Bar */
+header.ui-layer {
+  top: 0;

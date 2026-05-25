@@ -39,3 +39,12 @@ const SOLAR_SYSTEM_DATA = {
         argumentOfPerihelion: 29.1,
         color: "rgba(213, 0, 249, 0.25)"
       },
+      stats: {
+        distance: "0.39 AU (57.9M km)",
+        diameter: "4,879 km",
+        mass: "0.055 Earths",
+        year: "88 Earth Days",
+        day: "59 Earth Days",
+        temp: "-180°C to 430°C",
+        moons: "0"
+      },
