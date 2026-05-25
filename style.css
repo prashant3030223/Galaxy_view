@@ -52,3 +52,18 @@ body, html {
   z-index: 1;
   cursor: grab;
 }
+
+#space-viewport:active {
+  cursor: grabbing;
+}
+
+/* Glassmorphism Styling Utility */
+.glass-panel {
+  background: var(--panel-bg);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid var(--panel-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* UI Overlay - Layered over canvas */

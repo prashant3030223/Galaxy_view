@@ -31,3 +31,11 @@ const SOLAR_SYSTEM_DATA = {
       color: "#d500f9", // Purple-pink orbit accent (NASA style)
       bodyColor: "#b0bec5", // Gray rocky color
       orbit: {
+        semiMajorAxis: 60,
+        eccentricity: 0.2056,
+        period: 88, // Earth days
+        inclination: 7.0, // Degrees
+        longitudeOfAscendingNode: 48.3,
+        argumentOfPerihelion: 29.1,
+        color: "rgba(213, 0, 249, 0.25)"
+      },

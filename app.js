@@ -53,3 +53,16 @@ class SoundController {
     const lfoGain = this.ctx.createGain();
     lfoGain.gain.setValueAtTime(35, this.ctx.currentTime);
     
+    this.lfo.connect(lfoGain);
+    lfoGain.connect(this.filter.frequency);
+    
+    // Start oscillators
+    this.droneOsc1.start();
+    this.droneOsc2.start();
+    this.lfo.start();
+  }
+  
+  toggle() {
+    if (!this.ctx) this.init();
+    
+    if (this.isEnabled) {

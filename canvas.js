@@ -53,3 +53,16 @@ class SpaceCanvas {
       const r = 1000 + Math.random() * 500;
 
       this.stars.push({
+        x: r * Math.sin(phi) * Math.cos(theta),
+        y: r * Math.sin(phi) * Math.sin(theta),
+        z: r * Math.cos(phi),
+        brightness: 0.3 + Math.random() * 0.7,
+        size: 0.5 + Math.random() * 1.5
+      });
+    }
+  }
+
+  // 3D coordinate rotation based on Pitch (X-axis) and Yaw (Y-axis)
+  project(x, y, z) {
+    // 1. Rotate around Y axis (Yaw)
+    const cosY = Math.cos(this.yaw);
