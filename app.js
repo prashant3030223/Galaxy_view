@@ -122,3 +122,16 @@ class SoundController {
       osc.connect(gain);
       gain.connect(this.ctx.destination);
       
+      osc.start(time + idx * 0.06);
+      osc.stop(time + idx * 0.06 + 0.2);
+    });
+  }
+}
+
+// Main Application
+class SolarSystemApp {
+  constructor() {
+    this.spaceCanvas = new SpaceCanvas("space-viewport");
+    this.sound = new SoundController();
+
+    // Simulation Time

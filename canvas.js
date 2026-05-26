@@ -122,3 +122,16 @@ class SpaceCanvas {
     const yp = r * Math.sin(nu);
 
     // Rotate to include inclination (i) and longitude of ascending node (Omega)
+    const inc = o.inclination * Math.PI / 180;
+    const node = o.longitudeOfAscendingNode * Math.PI / 180;
+    const arg = o.argumentOfPerihelion * Math.PI / 180;
+
+    // Standard rotation equations for Keplerian elements
+    const cosNode = Math.cos(node);
+    const sinNode = Math.sin(node);
+    const cosArgInc = Math.cos(arg) * Math.cos(inc);
+    const sinArgInc = Math.sin(arg) * Math.cos(inc);
+    const sinInc = Math.sin(inc);
+
+    // 3D position where Sun is at (0,0,0) and orbit plane is tilted
+    const x = xp * (cosNode * Math.cos(arg) - sinNode * sinArgInc) - yp * (cosNode * Math.sin(arg) + sinNode * cosArgInc);
