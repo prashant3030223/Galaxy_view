@@ -135,3 +135,17 @@ class SolarSystemApp {
     this.sound = new SoundController();
 
     // Simulation Time
+    this.epochStart = Date.now();
+    this.simTimeDays = 0; // days since epoch
+    this.isPlaying = true;
+    
+    // Speed multiplier state (days per real-world second)
+    // Real rate is 1 second per second = 1 / (24 * 3600) days per second
+    const SEC_TO_DAYS = 1 / 86400;
+    this.speedRates = [
+      0, 
+      SEC_TO_DAYS,                // slider 1: 1s/s
+      SEC_TO_DAYS,                // slider 2: 1s/s (Real Rate)
+      SEC_TO_DAYS * 3600,         // slider 3: 1 hour/s
+      1,                          // slider 4: 1 day/s
+      7,                          // slider 5: 7 days/s

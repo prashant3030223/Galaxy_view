@@ -135,3 +135,17 @@ class SpaceCanvas {
 
     // 3D position where Sun is at (0,0,0) and orbit plane is tilted
     const x = xp * (cosNode * Math.cos(arg) - sinNode * sinArgInc) - yp * (cosNode * Math.sin(arg) + sinNode * cosArgInc);
+    const z = xp * (sinNode * Math.cos(arg) + cosNode * sinArgInc) - yp * (sinNode * Math.sin(arg) - cosNode * cosArgInc);
+    const y = xp * (Math.sin(arg) * sinInc) + yp * (Math.cos(arg) * sinInc);
+
+    return { x, y, z };
+  }
+
+  // Draw full scene
+  draw(time, sunData, planets, spacecraft) {
+    const width = this.canvas.width / (window.devicePixelRatio || 1);
+    const height = this.canvas.height / (window.devicePixelRatio || 1);
+
+    // Smooth camera movements (lerp)
+    this.zoom += (this.targetZoom - this.zoom) * 0.1;
+    this.pitch += (this.targetPitch - this.pitch) * 0.1;

@@ -81,3 +81,12 @@ const SOLAR_SYSTEM_DATA = {
         temp: "465°C (Average)",
         moons: "0"
       },
+      description: "Venus is the second planet from the Sun and our closest planetary neighbor. It's one of the four inner, terrestrial planets, and it's often called Earth's twin because it's similar in size and density. Venus rotates backward on its axis compared to most other planets.",
+      moons: [],
+      funFacts: [
+        "Venus is the hottest planet in our solar system due to a runaway greenhouse effect.",
+        "One day on Venus (rotation) is longer than one year (revolution around Sun).",
+        "Venus is the second-brightest natural object in the night sky after the Moon."
+      ]
+    },
+    {
