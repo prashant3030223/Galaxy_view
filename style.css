@@ -95,3 +95,17 @@ header.ui-layer {
 
 .brand h1 {
   font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ffffff 60%, rgba(255, 255, 255, 0.5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand span {
+  font-size: 9px;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  letter-spacing: 3px;

@@ -56,3 +56,11 @@ const SOLAR_SYSTEM_DATA = {
         "Mercury has a very thin 'exosphere' instead of a traditional atmosphere."
       ]
     },
+    {
+      id: "venus",
+      name: "Venus",
+      type: "planet",
+      radius: 7,
+      color: "#ffab40", // Orange
+      bodyColor: "#ffd54f", // Yellow-ish atmosphere color
+      orbit: {

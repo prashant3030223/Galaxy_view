@@ -93,3 +93,18 @@ class SpaceCanvas {
       visible: z2 > -this.cameraDistance // Clip points behind the camera
     };
   }
+
+  // Calculate planetary position in 3D using Keplerian elements approximation
+  // time parameter represents elapsed days in the simulation
+  getBodyPosition(body, time) {
+    if (body.id === "sun") {
+      return { x: 0, y: 0, z: 0 };
+    }
+
+    const o = body.orbit;
+    
+    // Mean anomaly M (linear with time)
+    // 360 / period in days = degrees per day. In radians: (2 * PI) / period
+    const M = (time * (2 * Math.PI / o.period)) + (body.id === "mercury" ? 1.0 : body.id === "venus" ? 2.5 : body.id === "earth" ? 4.0 : 0.0);
+
+    // Solve Kepler's equation equation of center approximation for eccentric anomaly

@@ -94,3 +94,17 @@ class SoundController {
     osc.frequency.setValueAtTime(1000, this.ctx.currentTime);
     osc.frequency.exponentialRampToValueAtTime(400, this.ctx.currentTime + 0.05);
     
+    gain.gain.setValueAtTime(0.02, this.ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + 0.05);
+    
+    osc.connect(gain);
+    gain.connect(this.ctx.destination);
+    
+    osc.start();
+    osc.stop(this.ctx.currentTime + 0.05);
+  }
+
+  playSelect() {
+    if (!this.ctx || !this.isEnabled) return;
+    const time = this.ctx.currentTime;
+    const notes = [587.33, 739.99, 880.00]; // D5, F#5, A5
