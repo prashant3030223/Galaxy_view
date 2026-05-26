@@ -80,3 +80,16 @@ class SpaceCanvas {
 
     // 3. Perspective Projection
     const scale = this.cameraDistance / (this.cameraDistance + z2);
+    const finalZoom = this.zoom * scale;
+
+    const screenX = (this.canvas.width / (2 * (window.devicePixelRatio || 1))) + (x2 * finalZoom) + this.panX;
+    const screenY = (this.canvas.height / (2 * (window.devicePixelRatio || 1))) + (y2 * finalZoom) + this.panY;
+
+    return {
+      x: screenX,
+      y: screenY,
+      z: z2,
+      scale: scale,
+      visible: z2 > -this.cameraDistance // Clip points behind the camera
+    };
+  }

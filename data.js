@@ -48,3 +48,11 @@ const SOLAR_SYSTEM_DATA = {
         temp: "-180°C to 430°C",
         moons: "0"
       },
+      description: "The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon. From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, and the sunlight would be as much as seven times brighter.",
+      moons: [],
+      funFacts: [
+        "Despite being closest to the Sun, it is not the hottest planet (Venus is).",
+        "Mercury is speedier than any other planet, traveling through space at nearly 47 kilometers per second.",
+        "Mercury has a very thin 'exosphere' instead of a traditional atmosphere."
+      ]
+    },

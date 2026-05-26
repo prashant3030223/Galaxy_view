@@ -81,3 +81,17 @@ body, html {
 /* Top Navigation Bar */
 header.ui-layer {
   top: 0;
+  left: 0;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand h1 {
+  font-family: var(--font-display);

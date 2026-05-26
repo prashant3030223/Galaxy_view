@@ -80,3 +80,17 @@ class SoundController {
       this.masterGain.gain.cancelScheduledValues(this.ctx.currentTime);
       this.masterGain.gain.setValueAtTime(this.masterGain.gain.value, this.ctx.currentTime);
       this.masterGain.gain.linearRampToValueAtTime(0.4, this.ctx.currentTime + 1.2);
+      this.isEnabled = true;
+    }
+    return this.isEnabled;
+  }
+  
+  playClick() {
+    if (!this.ctx || !this.isEnabled) return;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+    
+    osc.type = "sine";
+    osc.frequency.setValueAtTime(1000, this.ctx.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(400, this.ctx.currentTime + 0.05);
+    
