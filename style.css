@@ -109,3 +109,17 @@ header.ui-layer {
   font-family: var(--font-mono);
   color: var(--text-secondary);
   letter-spacing: 3px;
+  margin-top: 2px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--panel-border);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;

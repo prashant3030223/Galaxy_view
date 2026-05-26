@@ -108,3 +108,17 @@ class SoundController {
     if (!this.ctx || !this.isEnabled) return;
     const time = this.ctx.currentTime;
     const notes = [587.33, 739.99, 880.00]; // D5, F#5, A5
+    notes.forEach((freq, idx) => {
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(freq, time + idx * 0.06);
+      
+      gain.gain.setValueAtTime(0, time + idx * 0.06);
+      gain.gain.linearRampToValueAtTime(0.04, time + idx * 0.06 + 0.01);
+      gain.gain.exponentialRampToValueAtTime(0.0001, time + idx * 0.06 + 0.2);
+      
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+      

@@ -108,3 +108,17 @@ class SpaceCanvas {
     const M = (time * (2 * Math.PI / o.period)) + (body.id === "mercury" ? 1.0 : body.id === "venus" ? 2.5 : body.id === "earth" ? 4.0 : 0.0);
 
     // Solve Kepler's equation equation of center approximation for eccentric anomaly
+    // true anomaly nu
+    const e = o.eccentricity;
+    const nu = M + (2 * e - 0.25 * Math.pow(e, 3)) * Math.sin(M) + 
+               1.25 * Math.pow(e, 2) * Math.sin(2 * M) + 
+               (13 / 12) * Math.pow(e, 3) * Math.sin(3 * M);
+
+    // Orbit radius
+    const r = (o.semiMajorAxis * (1 - Math.pow(e, 2))) / (1 + e * Math.cos(nu));
+
+    // Coordinates in the orbital plane (z' is perpendicular to the orbit plane)
+    const xp = r * Math.cos(nu);
+    const yp = r * Math.sin(nu);
+
+    // Rotate to include inclination (i) and longitude of ascending node (Omega)

@@ -64,3 +64,12 @@ const SOLAR_SYSTEM_DATA = {
       color: "#ffab40", // Orange
       bodyColor: "#ffd54f", // Yellow-ish atmosphere color
       orbit: {
+        semiMajorAxis: 90,
+        eccentricity: 0.0067,
+        period: 224.7,
+        inclination: 3.39,
+        longitudeOfAscendingNode: 76.6,
+        argumentOfPerihelion: 54.8,
+        color: "rgba(255, 171, 64, 0.25)"
+      },
+      stats: {
