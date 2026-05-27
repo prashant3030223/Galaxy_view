@@ -115,3 +115,11 @@ const SOLAR_SYSTEM_DATA = {
         moons: "1"
       },
       description: "Our home planet is the third planet from the Sun, and the only place we know of so far that's inhabited by living things. While Earth is only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on the surface.",
+      moons: [
+        { name: "Moon", distance: 14, radius: 1.5, speed: 0.08 }
+      ],
+      funFacts: [
+        "Earth is the only planet in the universe known to possess life.",
+        "The Earth is not a perfect sphere; it's an oblate spheroid due to its rotation.",
+        "Earth's magnetic field protects us from harmful solar radiation."
+      ]

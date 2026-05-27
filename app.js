@@ -191,3 +191,16 @@ class SolarSystemApp {
           this.isPlaying = false;
           rateLabel.textContent = "PAUSED";
         } else {
+          this.isPlaying = true;
+          const sign = sliderVal < 0 ? -1 : 1;
+          const idx = Math.abs(sliderVal);
+          
+          let displayLabel = "REAL RATE";
+          if (idx === 3) {
+            displayLabel = "1 HOUR / SEC";
+          } else if (idx === 4) {
+            displayLabel = "1 DAY / SEC";
+          } else if (idx === 5) {
+            displayLabel = "7 DAYS / SEC";
+          } else if (idx === 6) {
+            displayLabel = "30 DAYS / SEC";

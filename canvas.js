@@ -190,3 +190,17 @@ class SpaceCanvas {
     // Clear canvas
     this.ctx.fillStyle = "#030712"; // Deep space background
     this.ctx.fillRect(0, 0, width, height);
+
+    // Draw Stars
+    this.drawStars();
+
+    // Prepare list of all renderable bodies
+    const renderList = [];
+
+    // Add Sun
+    const sunProj = this.project(0, 0, 0);
+    renderList.push({
+      body: sunData,
+      proj: sunProj,
+      x: 0, y: 0, z: 0,
+      radius: sunData.radius,
