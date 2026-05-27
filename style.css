@@ -178,3 +178,18 @@ header.ui-layer {
   height: 38px;
   font-size: 10px;
 }
+
+#btn-drag-mode.mode-pan {
+  border-color: rgba(255, 171, 64, 0.4);
+  box-shadow: 0 0 8px rgba(255, 171, 64, 0.15);
+  color: #ffab40;
+}
+
+/* Bottom Control HUD */
+footer.ui-layer {
+  bottom: 0;
+  left: 0;
+  padding: 16px 20px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;

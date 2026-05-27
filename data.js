@@ -106,3 +106,12 @@ const SOLAR_SYSTEM_DATA = {
         color: "rgba(0, 229, 255, 0.25)"
       },
       stats: {
+        distance: "1.00 AU (149.6M km)",
+        diameter: "12,742 km",
+        mass: "1.00 Earths",
+        year: "365.25 Days",
+        day: "24 Hours",
+        temp: "-89°C to 58°C",
+        moons: "1"
+      },
+      description: "Our home planet is the third planet from the Sun, and the only place we know of so far that's inhabited by living things. While Earth is only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on the surface.",

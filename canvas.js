@@ -177,3 +177,16 @@ class SpaceCanvas {
       const x2 = x1;
       const y2 = y1 * cosX - z1 * sinX;
       const z2 = y1 * sinX + z1 * cosX;
+
+      const scale = this.cameraDistance / (this.cameraDistance + z2);
+
+      this.targetPanX = -x2 * this.zoom * scale;
+      this.targetPanY = -y2 * this.zoom * scale;
+    }
+
+    this.panX += (this.targetPanX - this.panX) * 0.1;
+    this.panY += (this.targetPanY - this.panY) * 0.1;
+
+    // Clear canvas
+    this.ctx.fillStyle = "#030712"; // Deep space background
+    this.ctx.fillRect(0, 0, width, height);

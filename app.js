@@ -177,3 +177,17 @@ class SolarSystemApp {
         playPauseBtn.innerHTML = this.isPlaying ? "<i>Pause</i>" : "<i>Play</i>";
         playPauseBtn.classList.toggle("paused", !this.isPlaying);
       });
+    }
+
+    // 2. Speed Slider Control
+    const rateSlider = document.getElementById("rate-slider");
+    const rateLabel = document.getElementById("rate-label");
+    if (rateSlider) {
+      rateSlider.addEventListener("input", (e) => {
+        this.sound.playClick();
+        const sliderVal = parseInt(e.target.value);
+        
+        if (sliderVal === 0) {
+          this.isPlaying = false;
+          rateLabel.textContent = "PAUSED";
+        } else {
