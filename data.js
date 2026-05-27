@@ -90,3 +90,11 @@ const SOLAR_SYSTEM_DATA = {
       ]
     },
     {
+      id: "earth",
+      name: "Earth",
+      type: "planet",
+      radius: 8,
+      color: "#00e5ff", // Bright blue/cyan
+      bodyColor: "#29b6f6", // Blue and white marbled appearance
+      orbit: {
+        semiMajorAxis: 130,

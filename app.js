@@ -149,3 +149,17 @@ class SolarSystemApp {
       SEC_TO_DAYS * 3600,         // slider 3: 1 hour/s
       1,                          // slider 4: 1 day/s
       7,                          // slider 5: 7 days/s
+      30,                         // slider 6: 30 days/s
+      365,                        // slider 7: 1 year/s
+      3650                        // slider 8: 10 years/s
+    ];
+    this.speedIndex = 2; // Default to index 2 (REAL RATE)
+    
+    this.lastTime = performance.now();
+
+    // Planet details mini spinning visualizer
+    this.detailCanvas = document.getElementById("detail-planet-canvas");
+    this.detailCtx = this.detailCanvas ? this.detailCanvas.getContext("2d") : null;
+    this.planetSpinAngle = 0;
+
+    // Init UI and bind event listeners

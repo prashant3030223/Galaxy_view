@@ -151,3 +151,16 @@ header.ui-layer {
 .icon-btn.sound-on {
   border-color: rgba(0, 229, 255, 0.4);
   box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
+  color: #00e5ff;
+}
+
+/* Floating Controls (Right Side) */
+.floating-controls {
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 46px;
+}

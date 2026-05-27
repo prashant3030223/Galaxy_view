@@ -149,3 +149,17 @@ class SpaceCanvas {
     // Smooth camera movements (lerp)
     this.zoom += (this.targetZoom - this.zoom) * 0.1;
     this.pitch += (this.targetPitch - this.pitch) * 0.1;
+    this.yaw += (this.targetYaw - this.yaw) * 0.1;
+
+    // Camera target tracking
+    if (this.selectedBody) {
+      let targetPos = { x: 0, y: 0, z: 0 };
+      if (this.selectedBody.id !== "sun") {
+        targetPos = this.getBodyPosition(this.selectedBody, time);
+      }
+      
+      // Calculate target screen position and interpolate pan
+      const proj = this.project(targetPos.x, targetPos.y, targetPos.z);
+      
+      // We want this projected point to be at the center of the canvas
+      // screenX = width/2 + rotatedX * zoom * scale + panX = width/2
