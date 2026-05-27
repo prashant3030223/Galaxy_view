@@ -220,3 +220,17 @@ footer.ui-layer {
   gap: 8px;
   cursor: pointer;
 }
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-live);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--color-live);
+  animation: pulse 1.8s infinite alternate;
+}
+
+.live-status span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 2px;

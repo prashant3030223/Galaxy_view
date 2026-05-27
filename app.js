@@ -218,3 +218,17 @@ class SolarSystemApp {
           
           rateLabel.textContent = displayLabel;
           // Apply speed index
+          this.speedIndex = sliderVal;
+        }
+      });
+    }
+
+    // 3. Date Time Tapping
+    const liveIndicator = document.getElementById("live-indicator");
+    if (liveIndicator) {
+      liveIndicator.addEventListener("click", () => {
+        this.sound.playSelect();
+        // Reset simulation time to match exact real world time
+        this.epochStart = Date.now();
+        this.simTimeDays = 0;
+        if (rateSlider) rateSlider.value = 2; // reset rate to 2 (real rate)

@@ -131,3 +131,12 @@ const SOLAR_SYSTEM_DATA = {
       radius: 5.5,
       color: "#ff3d00", // Bright Red
       bodyColor: "#ff7043", // Rusty red
+      orbit: {
+        semiMajorAxis: 175,
+        eccentricity: 0.0934,
+        period: 687,
+        inclination: 1.85,
+        longitudeOfAscendingNode: 49.5,
+        argumentOfPerihelion: 286.5,
+        color: "rgba(255, 61, 0, 0.25)"
+      },

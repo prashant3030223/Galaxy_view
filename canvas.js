@@ -218,3 +218,17 @@ class SpaceCanvas {
 
       renderList.push({
         body: body,
+        proj: proj,
+        x: pos.x, y: pos.y, z: pos.z,
+        radius: body.radius,
+        drawOrder: proj.z
+      });
+    });
+
+    // Sort by z-depth (draw from back to front)
+    renderList.sort((a, b) => b.drawOrder - a.drawOrder);
+
+    // Draw bodies
+    this.hoveredBody = null;
+    renderList.forEach(item => {
+      if (item.proj.visible) {
