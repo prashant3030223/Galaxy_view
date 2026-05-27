@@ -163,3 +163,17 @@ class SolarSystemApp {
     this.planetSpinAngle = 0;
 
     // Init UI and bind event listeners
+    this.initUI();
+    this.loop();
+  }
+
+  initUI() {
+    // 1. Play/Pause
+    const playPauseBtn = document.getElementById("play-pause-btn");
+    if (playPauseBtn) {
+      playPauseBtn.addEventListener("click", () => {
+        this.sound.playClick();
+        this.isPlaying = !this.isPlaying;
+        playPauseBtn.innerHTML = this.isPlaying ? "<i>Pause</i>" : "<i>Play</i>";
+        playPauseBtn.classList.toggle("paused", !this.isPlaying);
+      });

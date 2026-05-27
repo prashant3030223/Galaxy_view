@@ -98,3 +98,11 @@ const SOLAR_SYSTEM_DATA = {
       bodyColor: "#29b6f6", // Blue and white marbled appearance
       orbit: {
         semiMajorAxis: 130,
+        eccentricity: 0.0167,
+        period: 365.25,
+        inclination: 0.0,
+        longitudeOfAscendingNode: 348.7,
+        argumentOfPerihelion: 114.2,
+        color: "rgba(0, 229, 255, 0.25)"
+      },
+      stats: {

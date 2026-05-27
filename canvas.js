@@ -163,3 +163,17 @@ class SpaceCanvas {
       
       // We want this projected point to be at the center of the canvas
       // screenX = width/2 + rotatedX * zoom * scale + panX = width/2
+      // rotatedX * zoom * scale + panX = 0 => panX = -rotatedX * zoom * scale
+      
+      // Rotate the coordinate manually to get the pan targets
+      const cosY = Math.cos(this.yaw);
+      const sinY = Math.sin(this.yaw);
+      const x1 = targetPos.x * cosY - targetPos.z * sinY;
+      const z1 = targetPos.x * sinY + targetPos.z * cosY;
+      const y1 = targetPos.y;
+
+      const cosX = Math.cos(this.pitch);
+      const sinX = Math.sin(this.pitch);
+      const x2 = x1;
+      const y2 = y1 * cosX - z1 * sinX;
+      const z2 = y1 * sinX + z1 * cosX;
