@@ -204,3 +204,17 @@ class SolarSystemApp {
             displayLabel = "7 DAYS / SEC";
           } else if (idx === 6) {
             displayLabel = "30 DAYS / SEC";
+          } else if (idx === 7) {
+            displayLabel = "1 YEAR / SEC";
+          } else if (idx === 8) {
+            displayLabel = "10 YEARS / SEC";
+          } else if (idx === 1) {
+            displayLabel = "1 SEC / SEC";
+          }
+          
+          if (sign < 0) {
+            displayLabel = `REVERSE ${displayLabel}`;
+          }
+          
+          rateLabel.textContent = displayLabel;
+          // Apply speed index

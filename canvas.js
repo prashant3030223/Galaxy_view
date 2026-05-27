@@ -204,3 +204,17 @@ class SpaceCanvas {
       proj: sunProj,
       x: 0, y: 0, z: 0,
       radius: sunData.radius,
+      drawOrder: sunProj.z
+    });
+
+    // Calculate planets and spacecraft positions
+    const activeBodies = [...planets, ...spacecraft];
+    activeBodies.forEach(body => {
+      const pos = this.getBodyPosition(body, time);
+      const proj = this.project(pos.x, pos.y, pos.z);
+      
+      // Draw orbits BEFORE drawing planets so they lie underneath
+      this.drawOrbit(body, time);
+
+      renderList.push({
+        body: body,

@@ -123,3 +123,11 @@ const SOLAR_SYSTEM_DATA = {
         "The Earth is not a perfect sphere; it's an oblate spheroid due to its rotation.",
         "Earth's magnetic field protects us from harmful solar radiation."
       ]
+    },
+    {
+      id: "mars",
+      name: "Mars",
+      type: "planet",
+      radius: 5.5,
+      color: "#ff3d00", // Bright Red
+      bodyColor: "#ff7043", // Rusty red
