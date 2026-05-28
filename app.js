@@ -232,3 +232,17 @@ class SolarSystemApp {
         this.epochStart = Date.now();
         this.simTimeDays = 0;
         if (rateSlider) rateSlider.value = 2; // reset rate to 2 (real rate)
+        if (rateLabel) rateLabel.textContent = "REAL RATE";
+        this.speedIndex = 2;
+        this.isPlaying = true;
+        this.spaceCanvas.resetView();
+        this.selectBody(null);
+      });
+    }
+
+    // 4. Viewport tapping
+    this.spaceCanvas.canvas.addEventListener("click", (e) => {
+      // If we clicked while dragging, do not select
+      if (this.spaceCanvas.isDragging) return;
+
+      const hovered = this.spaceCanvas.hoveredBody;

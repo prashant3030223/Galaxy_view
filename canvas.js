@@ -232,3 +232,17 @@ class SpaceCanvas {
     this.hoveredBody = null;
     renderList.forEach(item => {
       if (item.proj.visible) {
+        this.drawBody(item, time);
+      }
+    });
+  }
+
+  // Draw 3D background stars
+  drawStars() {
+    this.stars.forEach(star => {
+      const proj = this.project(star.x, star.y, star.z);
+      if (proj.visible && proj.scale > 0) {
+        const opacity = star.brightness * (0.8 + 0.2 * Math.sin(Date.now() * 0.003 + star.x));
+        this.ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
+        this.ctx.beginPath();
+        this.ctx.arc(proj.x, proj.y, star.size * proj.scale, 0, Math.PI * 2);
