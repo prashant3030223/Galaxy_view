@@ -148,3 +148,11 @@ const SOLAR_SYSTEM_DATA = {
         day: "24.6 Hours",
         temp: "-153°C to 20°C",
         moons: "2"
+      },
+      description: "Mars is the fourth planet from the Sun – a dusty, cold, desert world with a very thin atmosphere. There is strong evidence Mars was – billions of years ago – wetter and warmer, with a thicker atmosphere. Today, NASA is actively exploring Mars with rovers and orbiters.",
+      moons: [
+        { name: "Phobos", distance: 10, radius: 1, speed: 0.15 },
+        { name: "Deimos", distance: 15, radius: 0.8, speed: 0.08 }
+      ],
+      funFacts: [
+        "Mars is home to Olympus Mons, the tallest volcano in the Solar System (3x height of Everest).",

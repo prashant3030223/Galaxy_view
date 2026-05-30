@@ -246,3 +246,17 @@ class SolarSystemApp {
       if (this.spaceCanvas.isDragging) return;
 
       const hovered = this.spaceCanvas.hoveredBody;
+      if (hovered) {
+        this.sound.playSelect();
+        this.selectBody(hovered);
+      }
+    });
+
+    // 5. Sound toggle
+    const audioBtn = document.getElementById("audio-toggle-btn");
+    if (audioBtn) {
+      audioBtn.addEventListener("click", () => {
+        const isSoundOn = this.sound.toggle();
+        audioBtn.classList.toggle("sound-on", isSoundOn);
+        audioBtn.innerHTML = isSoundOn ? "<i>Audio: ON</i>" : "<i>Audio: OFF</i>";
+      });

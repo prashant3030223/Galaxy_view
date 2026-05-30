@@ -246,3 +246,17 @@ class SpaceCanvas {
         this.ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
         this.ctx.beginPath();
         this.ctx.arc(proj.x, proj.y, star.size * proj.scale, 0, Math.PI * 2);
+        this.ctx.fill();
+      }
+    });
+  }
+
+  // Draw orbital ellipses
+  drawOrbit(body, time) {
+    if (!body.orbit) return;
+
+    this.ctx.beginPath();
+    const steps = 180;
+    
+    for (let i = 0; i <= steps; i++) {
+      // Calculate position at angle theta
