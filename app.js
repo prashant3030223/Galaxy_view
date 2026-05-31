@@ -260,3 +260,16 @@ class SolarSystemApp {
         audioBtn.classList.toggle("sound-on", isSoundOn);
         audioBtn.innerHTML = isSoundOn ? "<i>Audio: ON</i>" : "<i>Audio: OFF</i>";
       });
+    }
+
+    // 6. Navigation Controls
+    const btnZoomIn = document.getElementById("btn-zoom-in");
+    const btnZoomOut = document.getElementById("btn-zoom-out");
+    const btnReset = document.getElementById("btn-reset");
+    const btnDragMode = document.getElementById("btn-drag-mode");
+
+    if (btnZoomIn) {
+      btnZoomIn.addEventListener("click", () => {
+        this.sound.playClick();
+        this.spaceCanvas.targetZoom = Math.min(45.0, this.spaceCanvas.targetZoom * 1.35);
+      });

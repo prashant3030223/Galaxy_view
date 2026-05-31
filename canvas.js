@@ -260,3 +260,15 @@ class SpaceCanvas {
     
     for (let i = 0; i <= steps; i++) {
       // Calculate position at angle theta
+      const theta = (i / steps) * Math.PI * 2;
+      const pos = this.getOrbitPoint3D(body, theta);
+      const proj = this.project(pos.x, pos.y, pos.z);
+
+      if (proj.visible) {
+        if (i === 0) {
+          this.ctx.moveTo(proj.x, proj.y);
+        } else {
+          this.ctx.lineTo(proj.x, proj.y);
+        }
+      }
+    }

@@ -156,3 +156,12 @@ const SOLAR_SYSTEM_DATA = {
       ],
       funFacts: [
         "Mars is home to Olympus Mons, the tallest volcano in the Solar System (3x height of Everest).",
+        "Its reddish color comes from iron oxide (rust) on its surface.",
+        "Liquid water cannot exist on the surface of Mars due to its low atmospheric pressure."
+      ]
+    },
+    {
+      id: "jupiter",
+      name: "Jupiter",
+      type: "planet",
+      radius: 17,
