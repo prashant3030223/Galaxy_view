@@ -273,3 +273,17 @@ class SolarSystemApp {
         this.sound.playClick();
         this.spaceCanvas.targetZoom = Math.min(45.0, this.spaceCanvas.targetZoom * 1.35);
       });
+    }
+    if (btnZoomOut) {
+      btnZoomOut.addEventListener("click", () => {
+        this.sound.playClick();
+        this.spaceCanvas.targetZoom = Math.max(0.1, this.spaceCanvas.targetZoom / 1.35);
+      });
+    }
+    if (btnReset) {
+      btnReset.addEventListener("click", () => {
+        this.sound.playClick();
+        this.spaceCanvas.resetView();
+        this.selectBody(null);
+      });
+    }

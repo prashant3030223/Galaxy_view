@@ -165,3 +165,11 @@ const SOLAR_SYSTEM_DATA = {
       name: "Jupiter",
       type: "planet",
       radius: 17,
+      color: "#ffc107", // Amber-yellow
+      bodyColor: "#d7ccc8", // Tan beige stripes
+      orbit: {
+        semiMajorAxis: 240,
+        eccentricity: 0.0484,
+        period: 4333, // ~11.86 years
+        inclination: 1.3,
+        longitudeOfAscendingNode: 100.5,

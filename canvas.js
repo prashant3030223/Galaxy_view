@@ -272,3 +272,18 @@ class SpaceCanvas {
         }
       }
     }
+
+    // Styling the orbit path
+    const isSelected = this.selectedBody && this.selectedBody.id === body.id;
+    const isHovered = this.hoveredBody && this.hoveredBody.id === body.id;
+    
+    this.ctx.strokeStyle = body.orbit.color || "rgba(255,255,255,0.15)";
+    this.ctx.lineWidth = isSelected ? 1.8 : isHovered ? 1.2 : 0.8;
+    
+    // Add subtle glow if selected
+    if (isSelected) {
+      this.ctx.shadowColor = body.color;
+      this.ctx.shadowBlur = 6;
+    }
+    
+    this.ctx.stroke();
