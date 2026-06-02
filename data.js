@@ -207,3 +207,11 @@ const SOLAR_SYSTEM_DATA = {
       bodyColor: "#ffe082", // Straw yellow
       orbit: {
         semiMajorAxis: 310,
+        eccentricity: 0.0541,
+        period: 10759, // ~29.45 years
+        inclination: 2.49,
+        longitudeOfAscendingNode: 113.7,
+        argumentOfPerihelion: 339.4,
+        color: "rgba(255, 183, 77, 0.18)"
+      },
+      stats: {

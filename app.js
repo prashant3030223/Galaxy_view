@@ -342,3 +342,17 @@ class SolarSystemApp {
 
   // Populate search result items
   renderSearchResults(query) {
+    const resultsDiv = document.getElementById("search-results");
+    if (!resultsDiv) return;
+
+    resultsDiv.innerHTML = "";
+    const cleanQuery = query.toLowerCase().trim();
+
+    // Filter items
+    const bodies = [
+      SOLAR_SYSTEM_DATA.sun,
+      ...SOLAR_SYSTEM_DATA.planets,
+      ...SOLAR_SYSTEM_DATA.spacecraft
+    ];
+
+    const matches = bodies.filter(b => b.name.toLowerCase().includes(cleanQuery));

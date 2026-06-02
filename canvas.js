@@ -342,3 +342,17 @@ class SpaceCanvas {
         proj.x, proj.y, 1,
         proj.x, proj.y, radius * proj.scale * this.zoom * 2.2
       );
+      grad.addColorStop(0, "#fffde7");
+      grad.addColorStop(0.2, body.color);
+      grad.addColorStop(0.5, "rgba(255, 143, 0, 0.45)");
+      grad.addColorStop(0.8, "rgba(255, 143, 0, 0.1)");
+      grad.addColorStop(1, "rgba(255, 87, 34, 0)");
+
+      this.ctx.fillStyle = grad;
+      this.ctx.beginPath();
+      this.ctx.arc(proj.x, proj.y, radius * proj.scale * this.zoom * 2.5, 0, Math.PI * 2);
+      this.ctx.fill();
+
+      // Core Sun
+      this.ctx.fillStyle = "#ffffff";
+      this.ctx.beginPath();
