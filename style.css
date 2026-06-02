@@ -318,3 +318,17 @@ footer.ui-layer {
 }
 
 .timeline-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid var(--bg-color);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  transition: transform 0.1s;
+}
+
+.timeline-slider::-webkit-slider-thumb:active {
+  transform: scale(1.25);
+}

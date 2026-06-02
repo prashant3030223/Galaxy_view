@@ -314,3 +314,18 @@ class SolarSystemApp {
         }
       });
     }
+
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        this.renderSearchResults(e.target.value);
+      });
+    }
+
+    // Close search modal when clicking outside contents
+    if (searchModal) {
+      searchModal.addEventListener("click", (e) => {
+        if (e.target === searchModal) {
+          searchModal.classList.remove("open");
+        }
+      });
+    }

@@ -190,3 +190,11 @@ const SOLAR_SYSTEM_DATA = {
         { name: "Io", distance: 24, radius: 1.2, speed: 0.06, color: "#fff59d" },
         { name: "Europa", distance: 30, radius: 1.1, speed: 0.04, color: "#e0f2f1" },
         { name: "Ganymede", distance: 38, radius: 1.6, speed: 0.03, color: "#b0bec5" },
+        { name: "Callisto", distance: 46, radius: 1.4, speed: 0.02, color: "#90a4ae" }
+      ],
+      funFacts: [
+        "The Great Red Spot is a giant storm bigger than Earth that has raged for hundreds of years.",
+        "Jupiter has the shortest day in the solar system, rotating once every 10 hours.",
+        "It acts as a cosmic shield for Earth, its massive gravity deflecting comets and asteroids."
+      ]
+    },

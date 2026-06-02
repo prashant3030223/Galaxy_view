@@ -315,3 +315,17 @@ class SpaceCanvas {
     const x = xp * (cosNode * Math.cos(arg) - sinNode * sinArgInc) - yp * (cosNode * Math.sin(arg) + sinNode * cosArgInc);
     const z = xp * (sinNode * Math.cos(arg) + cosNode * sinArgInc) - yp * (sinNode * Math.sin(arg) - cosNode * cosArgInc);
     const y = xp * (Math.sin(arg) * sinInc) + yp * (Math.cos(arg) * sinInc);
+
+    return { x, y, z };
+  }
+
+  // Draw Sun, Planets, Spacecraft
+  drawBody(item, time) {
+    const { body, proj, radius } = item;
+    const isSelected = this.selectedBody && this.selectedBody.id === body.id;
+    const isHovered = this.hoveredBody && this.hoveredBody.id === body.id;
+
+    // Check hovered
+    if (this.lastMouseX && this.lastMouseY) {
+      const sizeOnScreen = Math.max(radius * proj.scale * this.zoom, 10);
+      const dist = Math.hypot(this.lastMouseX - proj.x, this.lastMouseY - proj.y);
