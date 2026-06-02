@@ -287,3 +287,17 @@ class SolarSystemApp {
         this.selectBody(null);
       });
     }
+    if (btnDragMode) {
+      btnDragMode.addEventListener("click", () => {
+        this.sound.playClick();
+        const isRotate = this.spaceCanvas.dragMode === "rotate";
+        this.spaceCanvas.dragMode = isRotate ? "pan" : "rotate";
+        btnDragMode.innerHTML = isRotate ? "<i>Mode: PAN</i>" : "<i>Mode: ROTATE</i>";
+        btnDragMode.classList.toggle("mode-pan", !isRotate);
+      });
+    }
+
+    // 7. Search Bar
+    const searchBtn = document.getElementById("search-btn");
+    const searchModal = document.getElementById("search-modal");
+    const searchInput = document.getElementById("search-input");

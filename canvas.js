@@ -287,3 +287,17 @@ class SpaceCanvas {
     }
     
     this.ctx.stroke();
+    this.ctx.shadowBlur = 0; // reset
+  }
+
+  // Helper to get 3D coordinates of a specific orbit angle (theta)
+  getOrbitPoint3D(body, theta) {
+    const o = body.orbit;
+    const e = o.eccentricity;
+    
+    // Orbit radius at true anomaly theta
+    const r = (o.semiMajorAxis * (1 - Math.pow(e, 2))) / (1 + e * Math.cos(theta));
+
+    // Orbital plane coords
+    const xp = r * Math.cos(theta);
+    const yp = r * Math.sin(theta);
