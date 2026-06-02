@@ -356,3 +356,17 @@ class SolarSystemApp {
     ];
 
     const matches = bodies.filter(b => b.name.toLowerCase().includes(cleanQuery));
+
+    if (matches.length === 0) {
+      resultsDiv.innerHTML = `<div class="search-empty">No objects found</div>`;
+      return;
+    }
+
+    matches.forEach(body => {
+      const item = document.createElement("div");
+      item.className = "search-item";
+      
+      let typeLabel = body.type.toUpperCase();
+      if (body.id === "sun") typeLabel = "STAR";
+
+      item.innerHTML = `

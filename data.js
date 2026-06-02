@@ -215,3 +215,11 @@ const SOLAR_SYSTEM_DATA = {
         color: "rgba(255, 183, 77, 0.18)"
       },
       stats: {
+        distance: "9.58 AU (1.43B km)",
+        diameter: "116,460 km",
+        mass: "95.2 Earths",
+        year: "29.45 Earth Years",
+        day: "10.7 Hours",
+        temp: "-140°C (Average)",
+        moons: "146"
+      },

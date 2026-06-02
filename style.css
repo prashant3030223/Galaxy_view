@@ -360,3 +360,17 @@ footer.ui-layer {
   flex-direction: column;
   gap: 16px;
   transform: translateY(102%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: auto;
+  overflow: hidden;
+}
+
+.details-sheet.open {
+  transform: translateY(0);
+}
+
+.details-drag-handle {
+  width: 36px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;

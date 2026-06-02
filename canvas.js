@@ -356,3 +356,16 @@ class SpaceCanvas {
       // Core Sun
       this.ctx.fillStyle = "#ffffff";
       this.ctx.beginPath();
+      this.ctx.arc(proj.x, proj.y, radius * proj.scale * this.zoom, 0, Math.PI * 2);
+      this.ctx.fill();
+    } else {
+      // Standard Planet drawing
+      const size = Math.max(radius * proj.scale * this.zoom * 0.7, 3.5);
+      
+      // Draw selection ring
+      if (isSelected) {
+        this.ctx.strokeStyle = "#ffffff";
+        this.ctx.lineWidth = 1.5;
+        this.ctx.beginPath();
+        this.ctx.arc(proj.x, proj.y, size + 6, 0, Math.PI * 2);
+        this.ctx.stroke();
