@@ -329,3 +329,16 @@ class SpaceCanvas {
     if (this.lastMouseX && this.lastMouseY) {
       const sizeOnScreen = Math.max(radius * proj.scale * this.zoom, 10);
       const dist = Math.hypot(this.lastMouseX - proj.x, this.lastMouseY - proj.y);
+      if (dist < sizeOnScreen + 6) {
+        this.hoveredBody = body;
+      }
+    }
+
+    this.ctx.save();
+
+    if (body.type === "star") {
+      // Glow effect for Sun
+      const grad = this.ctx.createRadialGradient(
+        proj.x, proj.y, 1,
+        proj.x, proj.y, radius * proj.scale * this.zoom * 2.2
+      );

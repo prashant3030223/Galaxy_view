@@ -332,3 +332,17 @@ footer.ui-layer {
 .timeline-slider::-webkit-slider-thumb:active {
   transform: scale(1.25);
 }
+
+#rate-label {
+  align-self: center;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--color-live);
+  text-align: center;
+  margin-top: -2px;
+  font-weight: bold;
+}
+
+/* Planet Details Bottom Sheet */
+.details-sheet {

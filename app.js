@@ -329,3 +329,16 @@ class SolarSystemApp {
         }
       });
     }
+
+    // 8. Close Planet Details sheet
+    const closeDetailsBtn = document.getElementById("close-details-btn");
+    if (closeDetailsBtn) {
+      closeDetailsBtn.addEventListener("click", () => {
+        this.sound.playClick();
+        this.selectBody(null);
+      });
+    }
+  }
+
+  // Populate search result items
+  renderSearchResults(query) {

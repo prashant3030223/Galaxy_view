@@ -198,3 +198,12 @@ const SOLAR_SYSTEM_DATA = {
         "It acts as a cosmic shield for Earth, its massive gravity deflecting comets and asteroids."
       ]
     },
+    {
+      id: "saturn",
+      name: "Saturn",
+      type: "planet",
+      radius: 14,
+      color: "#ffb74d", // Soft orange
+      bodyColor: "#ffe082", // Straw yellow
+      orbit: {
+        semiMajorAxis: 310,
