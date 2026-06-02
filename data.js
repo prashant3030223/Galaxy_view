@@ -223,3 +223,12 @@ const SOLAR_SYSTEM_DATA = {
         temp: "-140°C (Average)",
         moons: "146"
       },
+      description: "Saturn is the sixth planet from the Sun and the second-largest planet in our solar system. Adorned with a dazzling, complex system of icy rings, Saturn is unique in our solar system. The other giant planets have rings, but none are as spectacular as Saturn's.",
+      moons: [
+        { name: "Titan", distance: 26, radius: 1.8, speed: 0.03, color: "#ffb74d" },
+        { name: "Rhea", distance: 34, radius: 1.0, speed: 0.02, color: "#e0e0e0" },
+        { name: "Dione", distance: 40, radius: 0.9, speed: 0.015, color: "#eeeeee" }
+      ],
+      hasRings: true,
+      funFacts: [
+        "Saturn is the least dense planet in the Solar System; it could float in water.",

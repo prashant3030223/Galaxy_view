@@ -369,3 +369,18 @@ class SpaceCanvas {
         this.ctx.beginPath();
         this.ctx.arc(proj.x, proj.y, size + 6, 0, Math.PI * 2);
         this.ctx.stroke();
+
+        // Crosshairs or target lines
+        this.ctx.strokeStyle = "rgba(255,255,255,0.4)";
+        this.ctx.lineWidth = 1;
+        this.ctx.beginPath();
+        this.ctx.moveTo(proj.x - size - 12, proj.y);
+        this.ctx.lineTo(proj.x - size - 4, proj.y);
+        this.ctx.moveTo(proj.x + size + 4, proj.y);
+        this.ctx.lineTo(proj.x + size + 12, proj.y);
+        this.ctx.moveTo(proj.x, proj.y - size - 12);
+        this.ctx.lineTo(proj.x, proj.y - size - 4);
+        this.ctx.moveTo(proj.x, proj.y + size + 4);
+        this.ctx.lineTo(proj.x, proj.y + size + 12);
+        this.ctx.stroke();
+      }

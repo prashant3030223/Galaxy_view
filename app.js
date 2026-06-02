@@ -370,3 +370,17 @@ class SolarSystemApp {
       if (body.id === "sun") typeLabel = "STAR";
 
       item.innerHTML = `
+        <span class="search-item-dot" style="background-color: ${body.color}"></span>
+        <div class="search-item-info">
+          <div class="search-item-name">${body.name}</div>
+          <div class="search-item-type">${typeLabel}</div>
+        </div>
+      `;
+
+      item.addEventListener("click", () => {
+        this.sound.playSelect();
+        this.selectBody(body);
+        document.getElementById("search-modal").classList.remove("open");
+      });
+
+      resultsDiv.appendChild(item);

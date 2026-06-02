@@ -374,3 +374,17 @@ footer.ui-layer {
   height: 4px;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 2px;
+  align-self: center;
+  margin-top: -12px;
+  margin-bottom: 8px;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.details-title-row {
+  display: flex;
+  align-items: center;
