@@ -304,3 +304,17 @@ footer.ui-layer {
   justify-content: space-between;
   font-size: 8px;
   font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.timeline-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.12);
+  outline: none;
+  cursor: pointer;
+}
+
+.timeline-slider::-webkit-slider-thumb {

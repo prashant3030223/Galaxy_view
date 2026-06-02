@@ -301,3 +301,16 @@ class SolarSystemApp {
     const searchBtn = document.getElementById("search-btn");
     const searchModal = document.getElementById("search-modal");
     const searchInput = document.getElementById("search-input");
+    const searchResults = document.getElementById("search-results");
+
+    if (searchBtn && searchModal) {
+      searchBtn.addEventListener("click", () => {
+        this.sound.playClick();
+        searchModal.classList.toggle("open");
+        if (searchModal.classList.contains("open") && searchInput) {
+          searchInput.value = "";
+          searchInput.focus();
+          this.renderSearchResults("");
+        }
+      });
+    }

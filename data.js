@@ -182,3 +182,11 @@ const SOLAR_SYSTEM_DATA = {
         mass: "317.8 Earths",
         year: "11.86 Earth Years",
         day: "9.9 Hours",
+        temp: "-110°C (Average)",
+        moons: "95 (Confirmed)"
+      },
+      description: "Jupiter is the fifth planet from the Sun and the largest in our solar system – more than twice as massive as all the other planets combined. Jupiter's familiar stripes and swirls are actually cold, windy clouds of ammonia and water, floating in an atmosphere of hydrogen and helium.",
+      moons: [
+        { name: "Io", distance: 24, radius: 1.2, speed: 0.06, color: "#fff59d" },
+        { name: "Europa", distance: 30, radius: 1.1, speed: 0.04, color: "#e0f2f1" },
+        { name: "Ganymede", distance: 38, radius: 1.6, speed: 0.03, color: "#b0bec5" },

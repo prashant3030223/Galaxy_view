@@ -301,3 +301,17 @@ class SpaceCanvas {
     // Orbital plane coords
     const xp = r * Math.cos(theta);
     const yp = r * Math.sin(theta);
+
+    const inc = o.inclination * Math.PI / 180;
+    const node = o.longitudeOfAscendingNode * Math.PI / 180;
+    const arg = o.argumentOfPerihelion * Math.PI / 180;
+
+    const cosNode = Math.cos(node);
+    const sinNode = Math.sin(node);
+    const cosArgInc = Math.cos(arg) * Math.cos(inc);
+    const sinArgInc = Math.sin(arg) * Math.cos(inc);
+    const sinInc = Math.sin(inc);
+
+    const x = xp * (cosNode * Math.cos(arg) - sinNode * sinArgInc) - yp * (cosNode * Math.sin(arg) + sinNode * cosArgInc);
+    const z = xp * (sinNode * Math.cos(arg) + cosNode * sinArgInc) - yp * (sinNode * Math.sin(arg) - cosNode * cosArgInc);
+    const y = xp * (Math.sin(arg) * sinInc) + yp * (Math.cos(arg) * sinInc);
