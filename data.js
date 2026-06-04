@@ -232,3 +232,11 @@ const SOLAR_SYSTEM_DATA = {
       hasRings: true,
       funFacts: [
         "Saturn is the least dense planet in the Solar System; it could float in water.",
+        "Its rings are not solid, but made of billions of chunks of ice, rock, and dust.",
+        "Saturn's moon Titan is larger than Mercury and is the only moon with a dense atmosphere."
+      ]
+    },
+    {
+      id: "uranus",
+      name: "Uranus",
+      type: "planet",

@@ -384,3 +384,17 @@ class SpaceCanvas {
         this.ctx.lineTo(proj.x, proj.y + size + 12);
         this.ctx.stroke();
       }
+
+      // Draw hover indicator
+      if (isHovered && !isSelected) {
+        this.ctx.strokeStyle = body.color || "rgba(255, 255, 255, 0.5)";
+        this.ctx.lineWidth = 1.0;
+        this.ctx.setLineDash([2, 2]);
+        this.ctx.beginPath();
+        this.ctx.arc(proj.x, proj.y, size + 5, 0, Math.PI * 2);
+        this.ctx.stroke();
+        this.ctx.setLineDash([]); // Reset dash
+      }
+
+      // Ring for Saturn
+      if (body.hasRings) {

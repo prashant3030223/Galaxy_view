@@ -384,3 +384,17 @@ class SolarSystemApp {
       });
 
       resultsDiv.appendChild(item);
+    });
+  }
+
+  // Handle selected celestial body
+  selectBody(body) {
+    this.spaceCanvas.focusOn(body ? body : SOLAR_SYSTEM_DATA.sun);
+    
+    // If we passed null, close details sheet
+    const sheet = document.getElementById("details-sheet");
+    if (!sheet) return;
+
+    if (!body) {
+      sheet.classList.remove("open");
+      this.spaceCanvas.selectedBody = null;
