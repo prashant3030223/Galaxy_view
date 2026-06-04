@@ -401,3 +401,18 @@ footer.ui-layer {
   display: flex;
   flex-direction: column;
 }
+
+.details-title h2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.details-title span {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}

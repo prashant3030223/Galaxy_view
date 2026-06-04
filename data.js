@@ -240,3 +240,12 @@ const SOLAR_SYSTEM_DATA = {
       id: "uranus",
       name: "Uranus",
       type: "planet",
+      radius: 10,
+      color: "#1de9b6", // Teal/Cyan green
+      bodyColor: "#80deea", // Pale cyan
+      orbit: {
+        semiMajorAxis: 380,
+        eccentricity: 0.0472,
+        period: 30687, // ~84 years
+        inclination: 0.77,
+        longitudeOfAscendingNode: 74.0,

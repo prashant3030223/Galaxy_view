@@ -398,3 +398,16 @@ class SpaceCanvas {
 
       // Ring for Saturn
       if (body.hasRings) {
+        this.drawSaturnRings(proj.x, proj.y, size);
+      }
+
+      // Draw planet sphere with shading (pseudo-3D lighting from Sun)
+      // Light source comes from center of screen (Sun)
+      const lightAngle = Math.atan2(proj.y - (this.canvas.height / (2 * (window.devicePixelRatio || 1)) + this.panY), proj.x - (this.canvas.width / (2 * (window.devicePixelRatio || 1)) + this.panX)) + Math.PI;
+
+      const grad = this.ctx.createRadialGradient(
+        proj.x + Math.cos(lightAngle) * size * 0.3,
+        proj.y + Math.sin(lightAngle) * size * 0.3,
+        1,
+        proj.x, proj.y, size
+      );

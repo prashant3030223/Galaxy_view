@@ -398,3 +398,16 @@ class SolarSystemApp {
     if (!body) {
       sheet.classList.remove("open");
       this.spaceCanvas.selectedBody = null;
+      return;
+    }
+
+    this.spaceCanvas.selectedBody = body;
+
+    // Fill sheet contents
+    document.getElementById("detail-name").textContent = body.name.toUpperCase();
+    document.getElementById("detail-type").textContent = body.type === "star" ? "YELLOW STAR" : body.type.toUpperCase();
+    document.getElementById("detail-type").style.color = body.color;
+    document.getElementById("detail-desc").textContent = body.description;
+
+    // Render Stats list
+    const statsGrid = document.getElementById("detail-stats");
