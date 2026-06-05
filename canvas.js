@@ -411,3 +411,17 @@ class SpaceCanvas {
         1,
         proj.x, proj.y, size
       );
+      grad.addColorStop(0, body.bodyColor || body.color);
+      grad.addColorStop(0.7, this.adjustBrightness(body.bodyColor || body.color, -50));
+      grad.addColorStop(1, "#030712"); // shadow side fade
+
+      this.ctx.fillStyle = grad;
+      this.ctx.beginPath();
+      this.ctx.arc(proj.x, proj.y, size, 0, Math.PI * 2);
+      this.ctx.fill();
+
+      // If it is Earth, draw a faint atmosphere glow
+      if (body.id === "earth") {
+        this.ctx.strokeStyle = "rgba(0, 229, 255, 0.4)";
+        this.ctx.lineWidth = 1.5;
+        this.ctx.beginPath();

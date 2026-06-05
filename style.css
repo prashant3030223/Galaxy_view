@@ -416,3 +416,17 @@ footer.ui-layer {
   color: var(--text-muted);
   margin-top: 2px;
 }
+
+.details-body {
+  overflow-y: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 24px;
+  /* Hide scrollbar utility */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.1) transparent;
+}
+
+.details-body::-webkit-scrollbar {

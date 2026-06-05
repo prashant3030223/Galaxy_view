@@ -411,3 +411,17 @@ class SolarSystemApp {
 
     // Render Stats list
     const statsGrid = document.getElementById("detail-stats");
+    statsGrid.innerHTML = "";
+    Object.entries(body.stats || {}).forEach(([key, val]) => {
+      const row = document.createElement("div");
+      row.className = "stat-row";
+      row.innerHTML = `
+        <span class="stat-name">${key.toUpperCase()}</span>
+        <span class="stat-val">${val}</span>
+      `;
+      statsGrid.appendChild(row);
+    });
+
+    // Moons display
+    const moonsDiv = document.getElementById("detail-moons-list");
+    const moonsSection = document.getElementById("detail-moons-section");

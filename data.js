@@ -249,3 +249,11 @@ const SOLAR_SYSTEM_DATA = {
         period: 30687, // ~84 years
         inclination: 0.77,
         longitudeOfAscendingNode: 74.0,
+        argumentOfPerihelion: 96.9,
+        color: "rgba(29, 233, 182, 0.15)"
+      },
+      stats: {
+        distance: "19.22 AU (2.87B km)",
+        diameter: "50,724 km",
+        mass: "14.5 Earths",
+        year: "84 Earth Years",
