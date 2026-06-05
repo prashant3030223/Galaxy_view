@@ -425,3 +425,17 @@ class SpaceCanvas {
         this.ctx.strokeStyle = "rgba(0, 229, 255, 0.4)";
         this.ctx.lineWidth = 1.5;
         this.ctx.beginPath();
+        this.ctx.arc(proj.x, proj.y, size + 0.5, 0, Math.PI * 2);
+        this.ctx.stroke();
+      }
+
+      // Draw planet moons if zoomed in close enough
+      if (body.moons && body.moons.length > 0 && this.zoom > 1.8) {
+        this.drawMoons(body, proj.x, proj.y, size, time);
+      }
+
+      // Draw Text Label
+      const showLabel = this.zoom > 0.45 || isSelected || isHovered;
+      if (showLabel) {
+        this.ctx.fillStyle = isSelected ? "#ffffff" : isHovered ? body.color : "rgba(255,255,255,0.7)";
+        this.ctx.font = isSelected ? "bold 11px Outfit, Inter, sans-serif" : "9px Outfit, Inter, sans-serif";

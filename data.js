@@ -257,3 +257,11 @@ const SOLAR_SYSTEM_DATA = {
         diameter: "50,724 km",
         mass: "14.5 Earths",
         year: "84 Earth Years",
+        day: "17.2 Hours",
+        temp: "-195°C (Average)",
+        moons: "28"
+      },
+      description: "Uranus is the seventh planet from the Sun. Its unique tilt causes it to rotate almost completely on its side, practically rolling around the Sun. Uranus is an ice giant, mostly composed of hot, dense fluid of 'icy' materials: water, methane, and ammonia.",
+      moons: [
+        { name: "Titania", distance: 20, radius: 1.1, speed: 0.025 },
+        { name: "Oberon", distance: 25, radius: 1.0, speed: 0.020 }

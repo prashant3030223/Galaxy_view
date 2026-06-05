@@ -425,3 +425,17 @@ class SolarSystemApp {
     // Moons display
     const moonsDiv = document.getElementById("detail-moons-list");
     const moonsSection = document.getElementById("detail-moons-section");
+    if (moonsDiv && moonsSection) {
+      if (body.moons && body.moons.length > 0) {
+        moonsSection.style.display = "block";
+        moonsDiv.innerHTML = body.moons.map(m => `<span class="moon-pill">${m.name}</span>`).join("");
+      } else {
+        moonsSection.style.display = "none";
+      }
+    }
+
+    // Fun facts
+    const factsDiv = document.getElementById("detail-facts-list");
+    if (factsDiv) {
+      factsDiv.innerHTML = (body.funFacts || []).map(fact => `<li>${fact}</li>`).join("");
+    }
