@@ -439,3 +439,16 @@ class SolarSystemApp {
     if (factsDiv) {
       factsDiv.innerHTML = (body.funFacts || []).map(fact => `<li>${fact}</li>`).join("");
     }
+
+    // Slide up sheet
+    sheet.classList.add("open");
+
+    // Reset rotating planet angle
+    this.planetSpinAngle = 0;
+  }
+
+  // Frame update loop
+  loop() {
+    const now = performance.now();
+    const dt = (now - this.lastTime) / 1000; // in seconds
+    this.lastTime = now;

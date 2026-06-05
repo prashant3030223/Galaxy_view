@@ -439,3 +439,17 @@ class SpaceCanvas {
       if (showLabel) {
         this.ctx.fillStyle = isSelected ? "#ffffff" : isHovered ? body.color : "rgba(255,255,255,0.7)";
         this.ctx.font = isSelected ? "bold 11px Outfit, Inter, sans-serif" : "9px Outfit, Inter, sans-serif";
+        this.ctx.textAlign = "left";
+        this.ctx.textBaseline = "middle";
+        this.ctx.fillText(body.name.toUpperCase(), proj.x + size + 6, proj.y);
+      }
+    }
+
+    this.ctx.restore();
+  }
+
+  // Draw Saturn's ring system in 3D tilted plane
+  drawSaturnRings(cx, cy, size) {
+    this.ctx.save();
+    
+    // Ring tilt matches overall pitch visually but squashed

@@ -265,3 +265,12 @@ const SOLAR_SYSTEM_DATA = {
       moons: [
         { name: "Titania", distance: 20, radius: 1.1, speed: 0.025 },
         { name: "Oberon", distance: 25, radius: 1.0, speed: 0.020 }
+      ],
+      funFacts: [
+        "Uranus is the coldest planet in the Solar System, even colder than Neptune.",
+        "It rotates on its side with an axial tilt of 98 degrees, likely due to a massive ancient collision.",
+        "It has faint rings, which were discovered in 1977."
+      ]
+    },
+    {
+      id: "neptune",
