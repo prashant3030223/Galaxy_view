@@ -274,3 +274,11 @@ const SOLAR_SYSTEM_DATA = {
     },
     {
       id: "neptune",
+      name: "Neptune",
+      type: "planet",
+      radius: 9.5,
+      color: "#2979ff", // Deep blue
+      bodyColor: "#42a5f5", // Rich blue
+      orbit: {
+        semiMajorAxis: 440,
+        eccentricity: 0.0086,

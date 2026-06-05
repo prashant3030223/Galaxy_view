@@ -453,3 +453,17 @@ class SpaceCanvas {
     this.ctx.save();
     
     // Ring tilt matches overall pitch visually but squashed
+    const scaleY = Math.abs(Math.sin(this.pitch));
+    this.ctx.translate(cx, cy);
+    this.ctx.scale(1, scaleY);
+    this.ctx.rotate(-this.yaw * 0.1); // rotate ring slightly based on yaw
+
+    // Outer Ring
+    this.ctx.strokeStyle = "rgba(215, 204, 200, 0.45)";
+    this.ctx.lineWidth = size * 0.3;
+    this.ctx.beginPath();
+    this.ctx.arc(0, 0, size * 1.9, 0, Math.PI * 2);
+    this.ctx.stroke();
+
+    // Inner Ring gap divider
+    this.ctx.strokeStyle = "rgba(3, 7, 18, 0.9)";

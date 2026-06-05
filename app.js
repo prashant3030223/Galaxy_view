@@ -452,3 +452,18 @@ class SolarSystemApp {
     const now = performance.now();
     const dt = (now - this.lastTime) / 1000; // in seconds
     this.lastTime = now;
+
+    if (this.isPlaying) {
+      // Calculate current simulation speed (days per second)
+      const sign = this.speedIndex < 0 ? -1 : 1;
+      const index = Math.abs(this.speedIndex);
+      const daysPerSec = this.speedRates[index] * sign;
+      
+      // Update simulation time
+      this.simTimeDays += daysPerSec * dt;
+    }
+
+    // Update Date HUD
+    this.updateDateHUD();
+
+    // Render 3D viewport
