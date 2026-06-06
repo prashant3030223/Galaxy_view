@@ -467,3 +467,15 @@ class SolarSystemApp {
     this.updateDateHUD();
 
     // Render 3D viewport
+    this.spaceCanvas.draw(
+      this.simTimeDays,
+      SOLAR_SYSTEM_DATA.sun,
+      SOLAR_SYSTEM_DATA.planets,
+      SOLAR_SYSTEM_DATA.spacecraft
+    );
+
+    // Draw the detail spinning planet representation
+    this.drawDetailPlanet(dt);
+
+    requestAnimationFrame(() => this.loop());
+  }

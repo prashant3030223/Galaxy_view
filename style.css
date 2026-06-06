@@ -471,3 +471,17 @@ footer.ui-layer {
   flex-direction: column;
   gap: 3px;
 }
+
+.stat-name {
+  font-size: 8px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.stat-val {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--text-primary);
+}

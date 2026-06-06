@@ -467,3 +467,16 @@ class SpaceCanvas {
 
     // Inner Ring gap divider
     this.ctx.strokeStyle = "rgba(3, 7, 18, 0.9)";
+    this.ctx.lineWidth = size * 0.05;
+    this.ctx.beginPath();
+    this.ctx.arc(0, 0, size * 1.7, 0, Math.PI * 2);
+    this.ctx.stroke();
+
+    // Inner Ring
+    this.ctx.strokeStyle = "rgba(255, 224, 130, 0.55)";
+    this.ctx.lineWidth = size * 0.45;
+    this.ctx.beginPath();
+    this.ctx.arc(0, 0, size * 1.45, 0, Math.PI * 2);
+    this.ctx.stroke();
+
+    this.ctx.restore();

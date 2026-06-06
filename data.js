@@ -282,3 +282,11 @@ const SOLAR_SYSTEM_DATA = {
       orbit: {
         semiMajorAxis: 440,
         eccentricity: 0.0086,
+        period: 60190, // ~164.8 years
+        inclination: 1.77,
+        longitudeOfAscendingNode: 131.8,
+        argumentOfPerihelion: 276.3,
+        color: "rgba(41, 121, 255, 0.15)"
+      },
+      stats: {
+        distance: "30.05 AU (4.50B km)",
