@@ -1,1 +1,1 @@
-# Galaxy_view
+# Galaxy_view full universe view
