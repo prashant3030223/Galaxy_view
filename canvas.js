@@ -508,3 +508,17 @@ class SpaceCanvas {
 
       // Draw Moon body
       this.ctx.fillStyle = moon.color || "#cfd8dc";
+      this.ctx.beginPath();
+      this.ctx.arc(mx, my, Math.max(moon.radius * this.zoom * 0.4, 1), 0, Math.PI * 2);
+      this.ctx.fill();
+    });
+  }
+
+  // Adjust color brightness helper
+  adjustBrightness(hex, percent) {
+    let R = parseInt(hex.substring(1, 3), 16);
+    let G = parseInt(hex.substring(3, 5), 16);
+    let B = parseInt(hex.substring(5, 7), 16);
+
+    R = parseInt(R * (100 + percent) / 100);
+    G = parseInt(G * (100 + percent) / 100);

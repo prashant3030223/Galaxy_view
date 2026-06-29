@@ -508,3 +508,17 @@ class SolarSystemApp {
 
   // Draw a highly polished spinning 2D canvas of the selected planet in the bottom sheet
   drawDetailPlanet(dt) {
+    if (!this.detailCtx || !this.spaceCanvas.selectedBody) return;
+
+    const ctx = this.detailCtx;
+    const body = this.spaceCanvas.selectedBody;
+    const width = this.detailCanvas.width;
+    const height = this.detailCanvas.height;
+
+    // Clear detail canvas
+    ctx.clearRect(0, 0, width, height);
+
+    this.planetSpinAngle += dt * 0.4; // rotation speed
+
+    const cx = width / 2;
+    const cy = height / 2;

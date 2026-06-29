@@ -307,3 +307,11 @@ const SOLAR_SYSTEM_DATA = {
         "Its blue color is due to atmospheric methane absorbing red light."
       ]
     }
+  ],
+  spacecraft: [
+    {
+      id: "voyager1",
+      name: "Voyager 1",
+      type: "spacecraft",
+      radius: 2.5,
+      color: "#eceff1",
