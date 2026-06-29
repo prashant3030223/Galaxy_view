@@ -522,3 +522,16 @@ class SolarSystemApp {
 
     const cx = width / 2;
     const cy = height / 2;
+    const size = Math.min(width, height) * 0.35;
+
+    ctx.save();
+
+    // Draw planet backdrop glow
+    const glowGrad = ctx.createRadialGradient(cx, cy, 2, cx, cy, size * 1.4);
+    glowGrad.addColorStop(0, body.color);
+    glowGrad.addColorStop(0.5, "rgba(255, 255, 255, 0.05)");
+    glowGrad.addColorStop(1, "rgba(0, 0, 0, 0)");
+    ctx.fillStyle = glowGrad;
+    ctx.beginPath();
+    ctx.arc(cx, cy, size * 1.5, 0, Math.PI * 2);
+    ctx.fill();

@@ -527,3 +527,17 @@ footer.ui-layer {
   -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px 20px 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.search-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-container {

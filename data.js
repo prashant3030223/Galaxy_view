@@ -315,3 +315,12 @@ const SOLAR_SYSTEM_DATA = {
       type: "spacecraft",
       radius: 2.5,
       color: "#eceff1",
+      orbit: {
+        type: "hyperbolic",
+        origin: "earth",
+        semiMajorAxis: 540,
+        eccentricity: 1.05,
+        period: 999999, // Moving away
+        inclination: 35.0,
+        longitudeOfAscendingNode: 120.0,
+        argumentOfPerihelion: 90.0,
