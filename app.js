@@ -479,3 +479,18 @@ class SolarSystemApp {
 
     requestAnimationFrame(() => this.loop());
   }
+
+  // Update date/time string in the control bar
+  updateDateHUD() {
+    const timestamp = this.epochStart + (this.simTimeDays * 24 * 60 * 60 * 1000);
+    const date = new Date(timestamp);
+
+    const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+    const month = monthNames[date.getMonth()];
+    const day = String(date.getDate()).padStart(2, '0');
+    const year = date.getFullYear();
+    
+    let hours = date.getHours();
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';

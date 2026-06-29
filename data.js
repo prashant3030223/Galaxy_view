@@ -290,3 +290,12 @@ const SOLAR_SYSTEM_DATA = {
       },
       stats: {
         distance: "30.05 AU (4.50B km)",
+        diameter: "49,244 km",
+        mass: "17.1 Earths",
+        year: "164.8 Earth Years",
+        day: "16.1 Hours",
+        temp: "-200°C (Average)",
+        moons: "16"
+      },
+      description: "Dark, cold, and whipped by supersonic winds, ice giant Neptune is the eighth and most distant major planet orbiting our Sun. More than 30 times as far from the Sun as Earth, Neptune is not visible to the naked eye and was the first planet located through mathematical calculations.",
+      moons: [

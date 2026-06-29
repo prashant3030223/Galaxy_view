@@ -480,3 +480,16 @@ class SpaceCanvas {
     this.ctx.stroke();
 
     this.ctx.restore();
+  }
+
+  // Draw moons orbiting a planet
+  drawMoons(parent, px, py, parentSize, time) {
+    parent.moons.forEach(moon => {
+      // Moons orbit circular in the planet's equator plane
+      const angle = time * moon.speed;
+      const radius = moon.distance * this.zoom * 0.35 + parentSize;
+      
+      // simple 2D orbit squashed by canvas pitch
+      const cosP = Math.abs(Math.sin(this.pitch));
+      const mx = px + Math.cos(angle) * radius;
+      const my = py + Math.sin(angle) * radius * cosP;
