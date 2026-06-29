@@ -324,3 +324,11 @@ const SOLAR_SYSTEM_DATA = {
         inclination: 35.0,
         longitudeOfAscendingNode: 120.0,
         argumentOfPerihelion: 90.0,
+        angleOffset: 1.2,
+        color: "rgba(236, 239, 241, 0.1)"
+      },
+      stats: {
+        mission: "Interstellar Mission",
+        launched: "Sept 5, 1977",
+        distance: "163 AU (24.4B km)",
+        speed: "61,000 km/h",

@@ -535,3 +535,17 @@ class SpaceCanvas {
     const rHex = R.toString(16).padStart(2, '0');
     const gHex = G.toString(16).padStart(2, '0');
     const bHex = B.toString(16).padStart(2, '0');
+
+    return `#${rHex}${gHex}${bHex}`;
+  }
+
+  // Interactive mouse/touch gesture bindings
+  setupEvents() {
+    // Mouse Down
+    this.canvas.addEventListener("mousedown", (e) => {
+      this.isDragging = true;
+      this.lastMouseX = e.clientX;
+      this.lastMouseY = e.clientY;
+    });
+
+    // Mouse Move

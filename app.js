@@ -535,3 +535,17 @@ class SolarSystemApp {
     ctx.beginPath();
     ctx.arc(cx, cy, size * 1.5, 0, Math.PI * 2);
     ctx.fill();
+
+    // Draw Saturn Rings on back side first if it is Saturn
+    if (body.hasRings) {
+      this.drawSpinningRings(ctx, cx, cy, size, true);
+    }
+
+    // Clip to the planet circle so surface features stay inside
+    ctx.beginPath();
+    ctx.arc(cx, cy, size, 0, Math.PI * 2);
+    ctx.clip();
+
+    // Draw base color
+    ctx.fillStyle = body.bodyColor || body.color;
+    ctx.fillRect(cx - size, cy - size, size * 2, size * 2);
