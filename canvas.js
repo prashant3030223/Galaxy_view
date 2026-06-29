@@ -493,3 +493,18 @@ class SpaceCanvas {
       const cosP = Math.abs(Math.sin(this.pitch));
       const mx = px + Math.cos(angle) * radius;
       const my = py + Math.sin(angle) * radius * cosP;
+
+      // Draw orbit path
+      this.ctx.strokeStyle = "rgba(255,255,255,0.06)";
+      this.ctx.lineWidth = 0.5;
+      this.ctx.beginPath();
+      
+      this.ctx.save();
+      this.ctx.translate(px, py);
+      this.ctx.scale(1, cosP);
+      this.ctx.arc(0, 0, radius, 0, Math.PI * 2);
+      this.ctx.stroke();
+      this.ctx.restore();
+
+      // Draw Moon body
+      this.ctx.fillStyle = moon.color || "#cfd8dc";

@@ -494,3 +494,17 @@ class SolarSystemApp {
     const minutes = String(date.getMinutes()).padStart(2, '0');
     const seconds = String(date.getSeconds()).padStart(2, '0');
     const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // 0 becomes 12
+    const timeStr = `${String(hours).padStart(2, '0')}:${minutes}:${seconds} ${ampm}`;
+
+    // Update values
+    const dateSpan = document.getElementById("hud-date");
+    const timeSpan = document.getElementById("hud-time");
+    
+    if (dateSpan) dateSpan.textContent = `${month} ${day}, ${year}`;
+    if (timeSpan) timeSpan.textContent = timeStr;
+  }
+
+  // Draw a highly polished spinning 2D canvas of the selected planet in the bottom sheet
+  drawDetailPlanet(dt) {

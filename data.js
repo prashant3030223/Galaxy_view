@@ -299,3 +299,11 @@ const SOLAR_SYSTEM_DATA = {
       },
       description: "Dark, cold, and whipped by supersonic winds, ice giant Neptune is the eighth and most distant major planet orbiting our Sun. More than 30 times as far from the Sun as Earth, Neptune is not visible to the naked eye and was the first planet located through mathematical calculations.",
       moons: [
+        { name: "Triton", distance: 22, radius: 1.3, speed: -0.03, color: "#cfd8dc" } // Retrograde orbit!
+      ],
+      funFacts: [
+        "Neptune has the strongest winds in the solar system, reaching up to 2,100 kilometers per hour.",
+        "It was discovered in 1846 by mathematical prediction before it was directly observed.",
+        "Its blue color is due to atmospheric methane absorbing red light."
+      ]
+    }
