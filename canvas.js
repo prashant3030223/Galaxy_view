@@ -549,3 +549,17 @@ class SpaceCanvas {
     });
 
     // Mouse Move
+    window.addEventListener("mousemove", (e) => {
+      const rect = this.canvas.getBoundingClientRect();
+      this.lastMouseX = e.clientX - rect.left;
+      this.lastMouseY = e.clientY - rect.top;
+
+      if (!this.isDragging) return;
+
+      const deltaX = e.clientX - this.lastMouseX - rect.left; // use standard clients
+      const deltaXRaw = e.movementX;
+      const deltaYRaw = e.movementY;
+
+      if (this.dragMode === "rotate") {
+        this.targetYaw += deltaXRaw * 0.007;
+        this.targetPitch = Math.max(0.1, Math.min(Math.PI / 2 - 0.05, this.targetPitch + deltaYRaw * 0.007));

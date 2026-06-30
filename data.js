@@ -332,3 +332,12 @@ const SOLAR_SYSTEM_DATA = {
         launched: "Sept 5, 1977",
         distance: "163 AU (24.4B km)",
         speed: "61,000 km/h",
+        status: "Active in Interstellar Space"
+      },
+      description: "Launched in 1977, Voyager 1 is the farthest human-made object in space. It flew past Jupiter and Saturn, and in 2012, crossed the heliopause to become the first spacecraft to enter interstellar space. It continues to send back invaluable data about this uncharted region.",
+      funFacts: [
+        "Carries the 'Golden Record', containing sounds and images selected to portray life on Earth.",
+        "It takes over 22 hours for radio signals from Voyager 1 to reach Earth.",
+        "It is running on radioisotope thermoelectric generators which are gradually losing power."
+      ]
+    },

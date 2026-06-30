@@ -549,3 +549,17 @@ class SolarSystemApp {
     // Draw base color
     ctx.fillStyle = body.bodyColor || body.color;
     ctx.fillRect(cx - size, cy - size, size * 2, size * 2);
+
+    // Draw animated surface features based on body type
+    ctx.strokeStyle = "rgba(0, 0, 0, 0.15)";
+    ctx.lineWidth = 1;
+
+    if (body.id === "sun") {
+      // Draw solar flares / noise
+      ctx.fillStyle = "rgba(255, 245, 158, 0.3)";
+      for (let i = -2; i < 4; i++) {
+        const xOffset = ((this.planetSpinAngle * 25) + i * 40) % (size * 3) - (size * 1.5);
+        ctx.beginPath();
+        ctx.arc(cx + xOffset, cy + Math.sin(i * 10) * 15, size * 0.4, 0, Math.PI * 2);
+        ctx.fill();
+      }
