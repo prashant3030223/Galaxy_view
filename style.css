@@ -610,3 +610,17 @@ footer.ui-layer {
   display: flex;
   flex-direction: column;
 }
+
+.search-item-name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 13.5px;
+}
+
+.search-item-type {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-top: 1.5px;
+}

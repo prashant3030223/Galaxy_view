@@ -605,3 +605,16 @@ class SpaceCanvas {
         const t2 = e.touches[1];
         touchStartDist = Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY);
       }
+    });
+
+    this.canvas.addEventListener("touchmove", (e) => {
+      const rect = this.canvas.getBoundingClientRect();
+      
+      if (e.touches.length === 1 && this.isDragging) {
+        const clientX = e.touches[0].clientX - rect.left;
+        const clientY = e.touches[0].clientY - rect.top;
+        
+        const deltaX = clientX - this.lastMouseX;
+        const deltaY = clientY - this.lastMouseY;
+
+        if (this.dragMode === "rotate") {

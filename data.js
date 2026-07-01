@@ -366,3 +366,11 @@ const SOLAR_SYSTEM_DATA = {
         speed: "690,000 km/h (record)",
         status: "Active orbiting the Sun"
       },
+      description: "NASA's Parker Solar Probe is the first mission to 'touch the Sun'. Traveling closer to the solar surface than any spacecraft before it, it withstands brutal heat and radiation to study the solar wind, magnetic fields, and corona to solve fundamental solar physics mysteries.",
+      funFacts: [
+        "It is the fastest human-made object in history, traveling at 0.06% of the speed of light.",
+        "Uses a high-tech carbon-composite heat shield that keeps its instruments at a comfortable 29°C while the front exceeds 1,300°C.",
+        "Uses Venus flybys to repeatedly shrink its orbit closer to the Sun."
+      ]
+    },
+    {

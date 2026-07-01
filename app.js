@@ -605,3 +605,16 @@ class SolarSystemApp {
     } else {
       // Rocky craters (Mercury, Mars, etc.)
       ctx.fillStyle = "rgba(0,0,0,0.06)";
+      for (let i = 0; i < 6; i++) {
+        const x = cx + ((this.planetSpinAngle * 30) + i * 45) % (size * 3) - size * 1.5;
+        const y = cy + Math.sin(i * 99) * size * 0.6;
+        ctx.beginPath();
+        ctx.arc(x, y, 4 + (i % 3) * 3, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    // Draw pseudo-3D shadow overlay (shading)
+    const shadow = ctx.createRadialGradient(
+      cx - size * 0.3, cy - size * 0.3, 1,
+      cx, cy, size
