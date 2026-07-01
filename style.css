@@ -624,3 +624,18 @@ footer.ui-layer {
   letter-spacing: 1px;
   margin-top: 1.5px;
 }
+
+.search-empty {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 30px;
+  font-size: 12.5px;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+    box-shadow: 0 0 4px var(--color-live);
+  }
+  100% {

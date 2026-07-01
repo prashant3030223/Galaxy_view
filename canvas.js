@@ -618,3 +618,17 @@ class SpaceCanvas {
         const deltaY = clientY - this.lastMouseY;
 
         if (this.dragMode === "rotate") {
+          this.targetYaw += deltaX * 0.008;
+          this.targetPitch = Math.max(0.1, Math.min(Math.PI / 2 - 0.05, this.targetPitch + deltaY * 0.008));
+        } else {
+          this.targetPanX += deltaX * 1.0;
+          this.targetPanY += deltaY * 1.0;
+          this.selectedBody = null; // Un-track body on manual pan
+        }
+
+        this.lastMouseX = clientX;
+        this.lastMouseY = clientY;
+      } else if (e.touches.length === 2 && this.isDragging) {
+        // Pinch zoom
+        const t1 = e.touches[0];
+        const t2 = e.touches[1];

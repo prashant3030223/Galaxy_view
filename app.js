@@ -618,3 +618,17 @@ class SolarSystemApp {
     const shadow = ctx.createRadialGradient(
       cx - size * 0.3, cy - size * 0.3, 1,
       cx, cy, size
+    );
+    shadow.addColorStop(0, "rgba(0, 0, 0, 0)");
+    shadow.addColorStop(0.65, "rgba(0, 0, 0, 0.35)");
+    shadow.addColorStop(1, "rgba(0, 0, 0, 0.85)"); // dark side
+    ctx.fillStyle = shadow;
+    ctx.fillRect(cx - size, cy - size, size * 2, size * 2);
+
+    ctx.restore(); // Stop clipping
+
+    // Draw Saturn Rings on front side now (to overlap correct hemisphere)
+    if (body.hasRings) {
+      this.drawSpinningRings(ctx, cx, cy, size, false);
+    }
+  }

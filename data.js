@@ -374,3 +374,11 @@ const SOLAR_SYSTEM_DATA = {
       ]
     },
     {
+      id: "europa_clipper",
+      name: "Europa Clipper",
+      type: "spacecraft",
+      radius: 2.2,
+      color: "#b0ff57", // Light green
+      orbit: {
+        type: "jupiter-orbit",
+        origin: "jupiter",
