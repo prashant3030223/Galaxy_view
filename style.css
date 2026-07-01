@@ -597,3 +597,16 @@ footer.ui-layer {
 }
 
 .search-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.search-item-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.search-item-info {
+  display: flex;
+  flex-direction: column;
+}

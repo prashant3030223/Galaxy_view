@@ -591,3 +591,17 @@ class SolarSystemApp {
         const x = cx + ((this.planetSpinAngle * 45) + i * size * 1.2) % (size * 4) - size * 2;
         if (x > -size * 2 && x < size * 2) {
           ctx.beginPath();
+          ctx.arc(x, cy - 10, size * 0.5, 0, Math.PI * 2);
+          ctx.arc(x + 20, cy + 15, size * 0.45, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+      // Faint blue atmosphere shadow
+      const atm = ctx.createRadialGradient(cx, cy, size * 0.8, cx, cy, size);
+      atm.addColorStop(0, "rgba(0, 0, 0, 0)");
+      atm.addColorStop(1, "rgba(128, 222, 234, 0.25)");
+      ctx.fillStyle = atm;
+      ctx.fillRect(cx - size, cy - size, size * 2, size * 2);
+    } else {
+      // Rocky craters (Mercury, Mars, etc.)
+      ctx.fillStyle = "rgba(0,0,0,0.06)";

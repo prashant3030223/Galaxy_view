@@ -357,3 +357,12 @@ const SOLAR_SYSTEM_DATA = {
         longitudeOfAscendingNode: 45.0,
         argumentOfPerihelion: 180.0,
         angleOffset: 0.5,
+        color: "rgba(255, 23, 68, 0.15)"
+      },
+      stats: {
+        mission: "Solar Corona Exploration",
+        launched: "Aug 12, 2018",
+        distance: "0.04 AU (6.1M km) at perihelion",
+        speed: "690,000 km/h (record)",
+        status: "Active orbiting the Sun"
+      },

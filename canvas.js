@@ -591,3 +591,17 @@ class SpaceCanvas {
     }, { passive: false });
 
     // Touch support (Mobile)
+    let touchStartDist = 0;
+    this.canvas.addEventListener("touchstart", (e) => {
+      this.isDragging = true;
+      const rect = this.canvas.getBoundingClientRect();
+      
+      if (e.touches.length === 1) {
+        this.lastMouseX = e.touches[0].clientX - rect.left;
+        this.lastMouseY = e.touches[0].clientY - rect.top;
+      } else if (e.touches.length === 2) {
+        // Pinch start
+        const t1 = e.touches[0];
+        const t2 = e.touches[1];
+        touchStartDist = Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY);
+      }
