@@ -639,3 +639,17 @@ footer.ui-layer {
     box-shadow: 0 0 4px var(--color-live);
   }
   100% {
+    opacity: 1;
+    box-shadow: 0 0 12px var(--color-live);
+  }
+}
+
+/* Desktop adaptations */
+@media (min-width: 768px) {
+  /* Detail sheet as a gorgeous right sidebar */
+  .details-sheet {
+    top: 80px;
+    right: 20px;
+    bottom: 24px;
+    left: auto;
+    width: 380px;

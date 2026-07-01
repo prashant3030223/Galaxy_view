@@ -632,3 +632,17 @@ class SolarSystemApp {
       this.drawSpinningRings(ctx, cx, cy, size, false);
     }
   }
+
+  // Draw Saturn's ring system in spinning mini display
+  drawSpinningRings(ctx, cx, cy, size, isBack) {
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.scale(1.8, 0.35); // squashed flat ring
+    ctx.rotate(0.2); // slight ring angle
+
+    ctx.beginPath();
+    
+    if (isBack) {
+      // Only draw the top half of the ring (back side of Saturn)
+      ctx.arc(0, 0, size * 1.6, Math.PI, 2 * Math.PI);
+    } else {

@@ -382,3 +382,12 @@ const SOLAR_SYSTEM_DATA = {
       orbit: {
         type: "jupiter-orbit",
         origin: "jupiter",
+        semiMajorAxis: 260, // Close to Jupiter orbit, but eccentric around Sun or Jupiter itself
+        eccentricity: 0.12,
+        period: 2500, // Visual representation cruising near Jupiter
+        inclination: 1.5,
+        longitudeOfAscendingNode: 100.0,
+        argumentOfPerihelion: 200.0,
+        angleOffset: 0.1,
+        color: "rgba(176, 255, 87, 0.15)"
+      },

@@ -632,3 +632,17 @@ class SpaceCanvas {
         // Pinch zoom
         const t1 = e.touches[0];
         const t2 = e.touches[1];
+        const dist = Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY);
+        
+        if (touchStartDist > 0) {
+          const ratio = dist / touchStartDist;
+          touchStartDist = dist;
+          this.targetZoom = Math.max(0.1, Math.min(45.0, this.targetZoom * (ratio > 1 ? 1.06 : 0.94)));
+        }
+      }
+    });
+
+    this.canvas.addEventListener("touchend", () => {
+      this.isDragging = false;
+      touchStartDist = 0;
+    });
