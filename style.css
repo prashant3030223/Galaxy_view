@@ -583,3 +583,17 @@ footer.ui-layer {
 .search-results {
   overflow-y: auto;
   flex-grow: 1;
+  padding: 8px 12px;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.search-item:hover {

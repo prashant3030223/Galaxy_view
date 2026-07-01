@@ -349,3 +349,11 @@ const SOLAR_SYSTEM_DATA = {
       color: "#ff1744", // Bright neon pink/red
       orbit: {
         type: "highly-eccentric",
+        origin: "sun",
+        semiMajorAxis: 40,
+        eccentricity: 0.78,
+        period: 88, // Fast orbit matching Mercury in period but highly eccentric
+        inclination: 3.4,
+        longitudeOfAscendingNode: 45.0,
+        argumentOfPerihelion: 180.0,
+        angleOffset: 0.5,

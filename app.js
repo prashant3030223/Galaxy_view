@@ -577,3 +577,17 @@ class SolarSystemApp {
         const grsX = cx + Math.sin(this.planetSpinAngle) * size * 0.6;
         const grsY = cy + size * 0.3;
         // GRS is visible on the front side
+        if (Math.cos(this.planetSpinAngle) > 0) {
+          ctx.fillStyle = "#d84315";
+          ctx.beginPath();
+          ctx.ellipse(grsX, grsY, size * 0.22, size * 0.14, 0, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+    } else if (body.id === "earth") {
+      // Draw Earth continents (simplified moving shapes)
+      ctx.fillStyle = "#81c784"; // Green continents
+      for (let i = 0; i < 3; i++) {
+        const x = cx + ((this.planetSpinAngle * 45) + i * size * 1.2) % (size * 4) - size * 2;
+        if (x > -size * 2 && x < size * 2) {
+          ctx.beginPath();

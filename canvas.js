@@ -577,3 +577,17 @@ class SpaceCanvas {
     // Mouse Up
     window.addEventListener("mouseup", () => {
       this.isDragging = false;
+    });
+
+    // Mouse Scroll (Zoom)
+    this.canvas.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      const zoomFactor = 1.15;
+      if (e.deltaY < 0) {
+        this.targetZoom = Math.min(45.0, this.targetZoom * zoomFactor);
+      } else {
+        this.targetZoom = Math.max(0.1, this.targetZoom / zoomFactor);
+      }
+    }, { passive: false });
+
+    // Touch support (Mobile)
