@@ -563,3 +563,17 @@ class SolarSystemApp {
         ctx.arc(cx + xOffset, cy + Math.sin(i * 10) * 15, size * 0.4, 0, Math.PI * 2);
         ctx.fill();
       }
+    } else if (body.id === "jupiter" || body.id === "saturn") {
+      // Draw planetary cloud bands
+      const bandCount = body.id === "jupiter" ? 8 : 4;
+      for (let i = 0; i < bandCount; i++) {
+        const y = cy - size + (i * (size * 2 / bandCount)) + (size / bandCount / 2);
+        ctx.fillStyle = i % 2 === 0 ? "rgba(0, 0, 0, 0.08)" : "rgba(255, 255, 255, 0.06)";
+        ctx.fillRect(cx - size, y - 4, size * 2, 8);
+      }
+      
+      // Great Red Spot for Jupiter
+      if (body.id === "jupiter") {
+        const grsX = cx + Math.sin(this.planetSpinAngle) * size * 0.6;
+        const grsY = cy + size * 0.3;
+        // GRS is visible on the front side

@@ -341,3 +341,11 @@ const SOLAR_SYSTEM_DATA = {
         "It is running on radioisotope thermoelectric generators which are gradually losing power."
       ]
     },
+    {
+      id: "parker",
+      name: "Parker Solar Probe",
+      type: "spacecraft",
+      radius: 2,
+      color: "#ff1744", // Bright neon pink/red
+      orbit: {
+        type: "highly-eccentric",

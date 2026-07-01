@@ -569,3 +569,17 @@ footer.ui-layer {
   border-radius: 12px;
   padding: 12px 16px;
   color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-input-wrapper input:focus {
+  border-color: rgba(0, 229, 255, 0.4);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.1);
+}
+
+.search-results {
+  overflow-y: auto;
+  flex-grow: 1;
