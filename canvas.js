@@ -646,3 +646,17 @@ class SpaceCanvas {
       this.isDragging = false;
       touchStartDist = 0;
     });
+  }
+
+  // Zoom to a body
+  focusOn(body, zoomLevel = null) {
+    this.selectedBody = body;
+    if (zoomLevel) {
+      this.targetZoom = zoomLevel;
+    } else {
+      // Smart zoom level based on planet radius
+      if (body.id === "sun") {
+        this.targetZoom = 0.8;
+      } else {
+        // Set zoom higher for smaller planets, lower for giant gas planets
+        this.targetZoom = Math.min(10, Math.max(1.5, 40 / body.radius));

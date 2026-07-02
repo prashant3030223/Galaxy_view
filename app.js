@@ -646,3 +646,17 @@ class SolarSystemApp {
       // Only draw the top half of the ring (back side of Saturn)
       ctx.arc(0, 0, size * 1.6, Math.PI, 2 * Math.PI);
     } else {
+      // Only draw the bottom half of the ring (front side of Saturn)
+      ctx.arc(0, 0, size * 1.6, 0, Math.PI);
+    }
+
+    ctx.strokeStyle = "rgba(224, 224, 224, 0.65)";
+    ctx.lineWidth = size * 0.4;
+    ctx.stroke();
+
+    // Ring shadow divider
+    ctx.beginPath();
+    if (isBack) {
+      ctx.arc(0, 0, size * 1.5, Math.PI, 2 * Math.PI);
+    } else {
+      ctx.arc(0, 0, size * 1.5, 0, Math.PI);

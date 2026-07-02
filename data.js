@@ -391,3 +391,11 @@ const SOLAR_SYSTEM_DATA = {
         angleOffset: 0.1,
         color: "rgba(176, 255, 87, 0.15)"
       },
+      stats: {
+        mission: "Europa Habitability Study",
+        launched: "Oct 14, 2024",
+        distance: "Heading to Jupiter",
+        speed: "14,300 km/h (cruise)",
+        status: "In Transit to Jupiter (Arrival 2030)"
+      },
+      description: "Europa Clipper is a major NASA interplanetary mission launched to study Jupiter's icy moon, Europa. Scientists believe Europa hides a massive liquid ocean beneath its icy crust that could contain the essential ingredients for life. The spacecraft will perform dozens of low-altitude flybys.",
