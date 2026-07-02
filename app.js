@@ -660,3 +660,16 @@ class SolarSystemApp {
       ctx.arc(0, 0, size * 1.5, Math.PI, 2 * Math.PI);
     } else {
       ctx.arc(0, 0, size * 1.5, 0, Math.PI);
+    }
+    ctx.strokeStyle = "rgba(0, 0, 0, 0.5)";
+    ctx.lineWidth = size * 0.05;
+    ctx.stroke();
+
+    ctx.restore();
+  }
+}
+
+// Instantiate on load
+window.addEventListener("DOMContentLoaded", () => {
+  window.app = new SolarSystemApp();
+});

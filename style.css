@@ -667,3 +667,16 @@ footer.ui-layer {
   .details-drag-handle {
     display: none;
   }
+
+  header.ui-layer {
+    padding: 24px 32px;
+  }
+
+  footer.ui-layer {
+    padding: 0 32px 32px 32px;
+  }
+
+  .floating-controls {
+    right: 32px;
+  }
+}

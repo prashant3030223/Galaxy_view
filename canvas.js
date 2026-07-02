@@ -660,3 +660,16 @@ class SpaceCanvas {
       } else {
         // Set zoom higher for smaller planets, lower for giant gas planets
         this.targetZoom = Math.min(10, Math.max(1.5, 40 / body.radius));
+      }
+    }
+  }
+
+  resetView() {
+    this.selectedBody = null;
+    this.targetZoom = 1.0;
+    this.targetPanX = 0;
+    this.targetPanY = 0;
+    this.targetPitch = 1.1;
+    this.targetYaw = 0.5;
+  }
+}

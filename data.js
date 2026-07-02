@@ -399,3 +399,11 @@ const SOLAR_SYSTEM_DATA = {
         status: "In Transit to Jupiter (Arrival 2030)"
       },
       description: "Europa Clipper is a major NASA interplanetary mission launched to study Jupiter's icy moon, Europa. Scientists believe Europa hides a massive liquid ocean beneath its icy crust that could contain the essential ingredients for life. The spacecraft will perform dozens of low-altitude flybys.",
+      funFacts: [
+        "It is the largest spacecraft NASA has ever built for a planetary mission.",
+        "Carries an array of 9 scientific instruments, including ice-penetrating radar and thermal imagers.",
+        "It will not orbit Europa directly due to Jupiter's intense radiation belts; instead, it will orbit Jupiter and fly by Europa."
+      ]
+    }
+  ]
+};
