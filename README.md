@@ -1,1 +1,2 @@
-# Galaxy_view 3D
+# Galaxy_view 3D Mobile first
+
